@@ -1,24 +1,26 @@
 	ORG	P:$E000
 
 main	
-	; no se puede cargar por completo a  A
-	; a = $00000000000000
-	move	#$000000,a0
+	; a empieza todo 0
+	; y empieza todo 0
+	; ccr empieza en 0 (bit de Extension=0)
 	move	#$a00000,a1
-	move	#$00,a2
+	;andi	#%00000000,ccr ; CCR = 0 (8bits)
+	; a = 00 a00000 000000
+	; el punto decimal esta en el valor a
+	; especificamente en 1.010
+	; si vemos el formato de acumulador,
+	; nos damos cuenta que es un numero entero mayor que 1
 	
-	; no se pude cargar por completo a y
-	move    #$000000,y0 ; parte menos signif
-	move	#$000000,y1 ; parte mas signif
-	andi	#%00000000,ccr ; CCR = 0 (8bits)
-	
-	move 	a1,x1; x1 = a00000
-	move 	a,y1 ; y1 = a1?, a = 1010, y1 = 7fffff = ca2(a1)?
-	move	a,r7 ; (r7 es de 16 bits) 16 bits mas signif de a1?
-	move	a1,x0; x0 = a00000
+	move 	a1,x1
+	move 	a,y1 
+	; al correr la linea anterior => CCR = $40
+	; esto es porque y1 puede representar como maximo algo
+	; del estilo 0.9999... 
+	; significa que el bit de limit se puso en 1, 
+	;o sea lo que guarde, lo guardo saturado
+	move 	a,y0
+	move	a,r7
+	move	a1,x0
 
-	;x = a00000 000000
-	;y = a00000 000000
-	;r7 = 
-	;ccr = 
 	end	 main
