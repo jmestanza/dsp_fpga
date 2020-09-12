@@ -16,7 +16,7 @@ class etapa:
         alphabysigma = self.alpha*self.sigma
         alphabymu = self.alpha*self.mu
         print(f";------------------Etapa{self.number}--------------")
-        print(f"\tDC\t{self._b} ; -β{self.number}")
+        print(f"\tDC\t{self._b} ; β{self.number}")
         print(f"\tDC\t{self.alpha} ; α{self.number}")
         print(f"\tDC\t{alphabysigma} ;α{self.number}σ{self.number}")
         print(f"\tDC\t{alphabymu} ; α{self.number}μ{self.number}")
@@ -30,26 +30,31 @@ class etapa:
         print(f"\t{alphabysigma}\t {self._b}")
 
 
-_β1 = -0.5
+β1 = 0.5
 α1 = 0.25 
 σ1 = 0.5 
 μ1 = 0.5 
 γ1 = 0.5
 
 ASM_DEBUG = True
-first = etapa("1",_β1,α1,σ1,μ1,γ1)
+SIMULINK_DEBUG = False
+
+first = etapa("1",β1,α1,σ1,μ1,γ1)
 if ASM_DEBUG:
     first.print_asm_coeffs()
-#first.print_simulink_coeffs()
+if SIMULINK_DEBUG:
+    first.print_simulink_coeffs()
 α2 = α1/2 
 
-second = etapa("2",_β1,α2,σ1,μ1,γ1)
+second = etapa("2",β1,α2,σ1,μ1,γ1)
 if ASM_DEBUG:
     second.print_asm_coeffs()
-#second.print_simulink_coeffs()
+if SIMULINK_DEBUG:
+    second.print_simulink_coeffs()
 
 α3 = α2/2 
-third = etapa("3",_β1,α3,σ1,μ1,γ1)
+third = etapa("3",β1,α3,σ1,μ1,γ1)
 if ASM_DEBUG:
     third.print_asm_coeffs()
-#third.print_simulink_coeffs()
+if SIMULINK_DEBUG:
+    third.print_simulink_coeffs()
