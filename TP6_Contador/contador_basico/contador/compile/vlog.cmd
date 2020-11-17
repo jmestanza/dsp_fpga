@@ -1,0 +1,1 @@
+-o C:/My_Designs/contador_basico/contador/compile -lc C:/My_Designs/contador_basico/library.cfg -fl C:/My_Designs/contador_basico/contador/projlib.cfg -pli "C:/Aldec/Active-HDL-Student-Edition/bin/systf.dll" -epr C:/My_Designs/contador_basico/contador/compile/contador.epr -O2 -sve -msg 5 -sv2k12 -work contador C:/My_Designs/contador_basico/contador/src/cnt.v 

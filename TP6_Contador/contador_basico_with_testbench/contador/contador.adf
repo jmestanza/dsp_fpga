@@ -1,0 +1,34 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=contador
+[Library]
+contador=.\contador\contador.lib
+[$LibMap$]
+contador=.
+Active_lib=
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+[Files]
+/contador_module.vhd=-1
+/contador_test_bench.vhd=-1
+/contador.asdb=-1
+/contador.awc=-1
+[Files.Data]
+.\src\contador_module.vhd=VHDL Source Code
+.\src\contador_test_bench.vhd=VHDL Source Code
+.\src\contador.asdb=Accelerated Waveform File
+.\src\contador.awc=Accelerated Waveform Configuration
+[SpecTracer]
+WindowVisible=0
+[HierarchyViewer]
+HierarchyInformation=prueba_4bit|prueba1|0      
+ShowHide=ShowTopLevel
+Selected=

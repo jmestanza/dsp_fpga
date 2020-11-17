@@ -1,0 +1,5 @@
+14
+~E 1 "../src/pwm_tb.vhd" 7 prueba_pwmtb
+~A 1 "../src/pwm_tb.vhd" 13 prueba1
+~E 1 "../src/pwm.vhd" 30 pwm
+~A 1 "../src/pwm.vhd" 20 logic

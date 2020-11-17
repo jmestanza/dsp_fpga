@@ -1,0 +1,5 @@
+13
+~E 1 "../src/contador_test_bench.vhd" 5 prueba_4bit
+~A 1 "../src/contador_test_bench.vhd" 8 prueba1
+~E 1 "../src/contador_module.vhd" 5 upcount
+~A 1 "../src/contador_module.vhd" 11 behavior

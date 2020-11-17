@@ -1,0 +1,5 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: C:/My_Designs/pwm/pwm_mod/src/pwm_tb.vhd" 
+MESSAGE "Compile Entity "prueba_pwmtb"" 
+MESSAGE "Compile Architecture "prueba1" of Entity "prueba_pwmtb"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  15.0 [ms]" 

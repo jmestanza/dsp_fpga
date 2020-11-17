@@ -1,0 +1,51 @@
+# do ad.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:42:33 on Nov 12,2020
+# vcom -work work ad.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity hard_block
+# -- Compiling architecture structure of hard_block
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package std_logic_arith
+# -- Compiling entity dafsm
+# -- Compiling architecture structure of dafsm
+# End time: 21:42:33 on Nov 12,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:42:33 on Nov 12,2020
+# vcom -work work Waveform2.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity dafsm_vhd_vec_tst
+# -- Compiling architecture dafsm_arch of dafsm_vhd_vec_tst
+# End time: 21:42:33 on Nov 12,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.dafsm_vhd_vec_tst 
+# Start time: 21:42:33 on Nov 12,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.dafsm_vhd_vec_tst(dafsm_arch)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading ieee.std_logic_arith(body)
+# Loading work.dafsm(structure)
+# ** Fatal: (vsim-3807) Types do not match between component and entity for port "y".
+#    Time: 0 ps  Iteration: 0  Instance: /dafsm_vhd_vec_tst/i1 File: ad.vho Line: 89
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 21:42:34 on Nov 12,2020, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0

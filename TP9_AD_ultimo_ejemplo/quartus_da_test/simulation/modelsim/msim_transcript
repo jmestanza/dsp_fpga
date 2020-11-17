@@ -1,0 +1,74 @@
+# Reading pref.tcl
+# do ad_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/dafsm.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:19:50 on Nov 16,2020
+# vcom -reportprogress 300 -93 -work work C:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/dafsm.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling package da_package
+# -- Loading package da_package
+# -- Compiling entity dafsm
+# -- Compiling architecture flex of dafsm
+# End time: 23:19:50 on Nov 16,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/case3.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:19:51 on Nov 16,2020
+# vcom -reportprogress 300 -93 -work work C:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/case3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity case3
+# -- Compiling architecture LCs of case3
+# End time: 23:19:51 on Nov 16,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/dafsm_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:19:51 on Nov 16,2020
+# vcom -reportprogress 300 -93 -work work C:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/dafsm_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity dafsm_tb
+# -- Compiling architecture prueba1 of dafsm_tb
+# -- Loading package da_package
+# -- Loading entity dafsm
+# End time: 23:19:51 on Nov 16,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  dafsm_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" dafsm_tb 
+# Start time: 23:19:51 on Nov 16,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.da_package
+# Loading work.dafsm_tb(prueba1)
+# Loading work.dafsm(flex)
+# Loading work.case3(lcs)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 500 ns
+# End time: 23:20:00 on Nov 16,2020, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0

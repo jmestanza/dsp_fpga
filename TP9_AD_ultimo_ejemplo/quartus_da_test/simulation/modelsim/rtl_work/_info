@@ -1,0 +1,167 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/dsp_fpga/TP8_Aritmetica_distribuida/simulation/modelsim
+Ecase3
+Z1 w1066168016
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z5 8C:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/case3.vhd
+Z6 FC:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/case3.vhd
+l0
+L5 1
+V:BXWa^DG[X]AXhMRohBe73
+!s100 oY:E1Kn@o5cmnRV]ON6<R3
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1605579591
+!i10b 1
+Z9 !s108 1605579591.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/case3.vhd|
+Z11 !s107 C:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/case3.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Alcs
+R2
+R3
+R4
+DEx4 work 5 case3 0 22 :BXWa^DG[X]AXhMRohBe73
+!i122 1
+l11
+L10 22
+VkCh?^W>f5VIfhK0z=hHD70
+!s100 F3fJb3=]AIe<IYbk3:9Ld1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Pda_package
+R2
+R3
+R4
+!i122 0
+Z14 w1605228718
+R0
+Z15 8C:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/dafsm.vhd
+Z16 FC:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/dafsm.vhd
+l0
+L4 1
+VSNUd@G3Ih>f5O_o2eFOlX2
+!s100 7VbM92<4jz;Q<[AiE9cmQ0
+R7
+31
+Z17 !s110 1605579590
+!i10b 1
+Z18 !s108 1605579590.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/dafsm.vhd|
+Z20 !s107 C:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/dafsm.vhd|
+!i113 1
+R12
+R13
+Edafsm
+R14
+R2
+R3
+R4
+Z21 DPx4 work 10 da_package 0 22 SNUd@G3Ih>f5O_o2eFOlX2
+!i122 0
+R0
+R15
+R16
+l0
+L17 1
+VAH0`bSkU;NccNG?0m^R9_2
+!s100 a?>2iMjAS[l`T@9H^<J7b0
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Aflex
+R2
+R3
+R4
+R21
+Z22 DEx4 work 5 dafsm 0 22 AH0`bSkU;NccNG?0m^R9_2
+!i122 0
+l30
+L24 47
+VGn:2aJ2CR8DC]25bQSSDd3
+!s100 =VHAkD;i_zW_=GaF=<[CG0
+R7
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Edafsm_tb
+Z23 w1605228748
+R2
+R3
+R4
+!i122 2
+R0
+Z24 8C:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/dafsm_tb.vhd
+Z25 FC:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/dafsm_tb.vhd
+l0
+L5 1
+VoZWRb=1`jH<<SdN^GKN8N2
+!s100 FOOnEQm?I4lcd3fTO^2GW0
+R7
+31
+R8
+!i10b 1
+R9
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/dafsm_tb.vhd|
+!s107 C:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/dafsm_tb.vhd|
+!i113 1
+R12
+R13
+Aprueba1
+R21
+R22
+R2
+R3
+R4
+DEx4 work 8 dafsm_tb 0 22 oZWRb=1`jH<<SdN^GKN8N2
+!i122 2
+l23
+L8 19
+V^Ia51moeSK6EP<a2_IRBf0
+!s100 aS0K60OPX9S0FS3KJWh7>1
+R7
+31
+R8
+!i10b 1
+R9
+R26
+Z27 !s107 C:/dsp_fpga/TP8_Aritmetica_distribuida/da_code/dafsm_tb.vhd|
+!i113 1
+R12
+R13

@@ -1,0 +1,36 @@
+timestamp=1605584382719
+
+[~A]
+ModifyID=13
+Version=74
+
+[~MFT]
+0=2|0contador.mgf|4971|1993
+1=2|1contador.mgf|12086|10686
+3=2|3contador.mgf|2436|2145
+
+[prueba_4bit]
+A/prueba1=21|../src/contador_test_bench.vhd|8|1*7422
+BinI32/prueba1=3*2145
+I=0*2037
+I/prueba1=0*4132
+M=11|0|ve4|1602804564100|../src/contador_test_bench.vhd|0*1724*0x8726a90adc61bdbcb7790f7920b8ae588928b115|0*1942*0x23b75c12e3e89f2ef000564498faa8c2
+M/prueba1=21|0|ve4|1602805254345|../src/contador_test_bench.vhd|0*2323*0x09e71c7ddfe8519042c6c17a1c46869bd1855ef7|0*2788*0x20116f55b147878295aeff36dce7fc50
+R=../src/contador_test_bench.vhd|5
+Version=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|0bf1ce59c5913aa9462f671931bb16c68c80d223ba44d0090b583fb7ca5324a7a599610fde3871b750e0a664b5765bd5
+Version/prueba1=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|bd125a57b9e764c42847fd156abe9bc526527262ddaa47cb266f3a3c4d9b973a82b0f39c91db24f7a4c7a44718f64a55
+
+[upcount]
+A/behavior=21|../src/contador_module.vhd|11|1*12086
+BinI32/behavior=3*2436
+I=0*559
+I/behavior=0*4971
+M=11|0|ve4|1602803846366|../src/contador_module.vhd|0*206*0x432cabbea347f85c6c324bdb9ab4297505791b47|0*472*0x23b75c12e3e89f2ef000564498faa8c2
+M/behavior=21|0|ve4|1605584382712|../src/contador_module.vhd|0*4460*0x6a74eefdec0c449ac38ecbaa43ccfdab00ae56bf|0*4872*0x20116f55b147878295aeff36dce7fc50
+R=../src/contador_module.vhd|5
+Version=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|49b15c2093e3f59579440c8e6d13eb4a26527262ddaa47cb266f3a3c4d9b973a4a52c75409c8f30cadf4b1a94d8c5a98
+Version/behavior=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|f9bccf16e2dce5a640f0ad5e8eaa0283e08d679eaf1bc9de9439630905b37e5fb3b162f5ef2e424d7b7c1416288ea11e
+
+[~U]
+prueba_4bit=11|0*1596|
+upcount=11|0*0|

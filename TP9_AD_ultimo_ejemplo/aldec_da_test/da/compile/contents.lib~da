@@ -1,0 +1,7 @@
+2
+~E 1 "../src/case3.vhd" 5 case3
+~A 1 "../src/case3.vhd" 10 LCs
+~E 1 "../src/dafsm.vhd" 17 dafsm
+~A 1 "../src/dafsm.vhd" 24 flex
+~E 1 "../src/dafsm_tb.vhd" 5 dafsm_tb
+~A 1 "../src/dafsm_tb.vhd" 8 prueba1

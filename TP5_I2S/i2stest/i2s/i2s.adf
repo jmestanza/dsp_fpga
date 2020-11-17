@@ -1,0 +1,30 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=i2s
+[Library]
+i2s=.\i2s\i2s.lib
+[$LibMap$]
+i2s=.
+Active_lib=
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+[Files]
+/i2stb.vhd=-1
+/i2smod.vhd=-1
+[Files.Data]
+.\src\i2stb.vhd=VHDL Source Code
+.\src\i2smod.vhd=VHDL Source Code
+[SpecTracer]
+WindowVisible=0
+[HierarchyViewer]
+HierarchyInformation=prueba_i2stb|prueba1|0  
+ShowHide=ShowTopLevel
+Selected=

@@ -1,0 +1,12 @@
+[Version]
+Version=11.1
+[Designs]
+pwm_mod=.\pwm_mod\pwm_mod.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+pwm_mod=1

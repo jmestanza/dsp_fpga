@@ -1,0 +1,1 @@
+"..\..\..\Compiladores\56300\clas\dsplnk.exe" %1

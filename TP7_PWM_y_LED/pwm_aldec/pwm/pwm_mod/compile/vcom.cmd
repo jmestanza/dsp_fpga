@@ -1,0 +1,1 @@
+-w -erf C:/My_Designs/pwm/pwm_mod/compile/pwm_mod.erf -d C:/My_Designs/pwm/pwm_mod/compile -s C:/My_Designs/pwm/library.cfg -j C:/My_Designs/pwm/pwm_mod/projlib.cfg -work pwm_mod -O3 -e 100 -work pwm_mod -2002 C:/My_Designs/pwm/pwm_mod/src/pwm_tb.vhd 

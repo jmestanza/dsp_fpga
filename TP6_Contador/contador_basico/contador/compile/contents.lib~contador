@@ -1,0 +1,7 @@
+3
+~M 0 "" 0 $root
+~A 1 "" 0 $root
+~M 1 "../src/cnt.v" 3 ctr
+~A 1 "../src/cnt.v" 3 ctr
+~M 3 "../src/cnt.v" 19 tb
+~A 1 "../src/cnt.v" 19 tb

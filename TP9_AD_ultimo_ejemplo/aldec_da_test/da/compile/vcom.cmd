@@ -1,0 +1,1 @@
+-w -erf c:/My_Designs/da_test/da/compile/da.erf -d c:/My_Designs/da_test/da/compile -s c:/My_Designs/da_test/library.cfg -j c:/My_Designs/da_test/da/projlib.cfg -work da -O3 -e 100 -work da -2002 c:/My_Designs/da_test/da/src/dafsm.vhd c:/My_Designs/da_test/da/src/dafsm_tb.vhd c:/My_Designs/da_test/da/src/case3.vhd 

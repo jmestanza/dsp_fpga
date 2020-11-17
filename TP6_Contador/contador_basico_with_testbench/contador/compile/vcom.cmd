@@ -1,0 +1,1 @@
+-w -erf C:/My_Designs/contador_with_testbench/contador/compile/contador.erf -d C:/My_Designs/contador_with_testbench/contador/compile -s C:/My_Designs/contador_with_testbench/library.cfg -j C:/My_Designs/contador_with_testbench/contador/projlib.cfg -work contador -O3 -e 100 -work contador -2002 C:/My_Designs/contador_with_testbench/contador/src/contador_module.vhd 
