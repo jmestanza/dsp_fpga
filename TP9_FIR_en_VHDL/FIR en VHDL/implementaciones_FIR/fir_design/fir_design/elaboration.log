@@ -1,0 +1,40 @@
+Active-HDL 11.1.262.7351 2020-11-17 22:11:09
+
+Elaboration top modules:
+Architecture                  tb_implementation(fir_testbench)
+
+
+------------------------------------------------------------------------------------------------------------
+Entity         | Architecture           | Library    | Info | Compiler Version        | Compilation Options
+------------------------------------------------------------------------------------------------------------
+fir_testbench  | tb_implementation      | fir_design |      | 11.1.262.7351 (Windows) | -O3
+impulse_entity | impulse_implementation | fir_design |      | 11.1.262.7351 (Windows) | -O3
+fir_entity     | naive_fir              | fir_design |      | 11.1.262.7351 (Windows) | -O3
+fir_entity     | symmetric_fir          | fir_design |      | 11.1.262.7351 (Windows) | -O3
+fir_entity     | csd_and_symmetry_fir   | fir_design |      | 11.1.262.7351 (Windows) | -O3
+fir_entity     | csd_sym_pipeline_fir   | fir_design |      | 11.1.262.7351 (Windows) | -O3
+------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------
+VHDL Package                            | Library    | Info | Compiler Version        | Compilation Options
+------------------------------------------------------------------------------------------------------------
+standard                                | std        |      |                         | <unavailable>
+TEXTIO                                  | std        |      |                         | <unavailable>
+std_logic_1164                          | ieee       |      |                         | <unavailable>
+eight_bit_int                           | fir_design |      |                         | <unavailable>
+std_logic_arith                         | ieee       |      |                         | <unavailable>
+------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------
+Library                                 | Comment
+------------------------------------------------------------------------------------------------------------
+fir_design                              | None
+ieee                                    | Standard IEEE packages library
+std                                     | Standard VHDL library
+------------------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -O5 +access +r +m+fir_testbench fir_testbench tb_implementation
+
+
+The performance of simulation is reduced. Version Student Edition

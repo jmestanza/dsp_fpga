@@ -35,6 +35,6 @@ fileopenfolder=C:\dsp_fpga\ad\da_code
 [SpecTracer]
 WindowVisible=0
 [HierarchyViewer]
-HierarchyInformation=dafsm_tb|prueba1|0 
+HierarchyInformation=dafsm_tb|prueba1|0  
 ShowHide=ShowTopLevel
 Selected=

@@ -1,0 +1,42 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+
+[Configurations]
+compile=fir_design
+
+[Library]
+fir_design=.\fir_design\fir_design.lib
+
+[$LibMap$]
+fir_design=.
+Active_lib=
+
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+fileopenfolder=C:\dsp_fpga\FIR en VHDL\implementaciones_FIR\fir_design\src
+
+[SpecTracer]
+WindowVisible=0
+
+[HierarchyViewer]
+HierarchyInformation=fir_testbench|tb_implementation|0   
+ShowHide=ShowTopLevel
+Selected=
+
+[Files]
+/fir_implementaciones.vhd=-1
+/fir_implementaciones_tb.vhd=-1
+/impulse.vhd=-1
+
+[Files.Data]
+.\src\fir_implementaciones.vhd=VHDL Source Code
+.\src\fir_implementaciones_tb.vhd=VHDL Source Code
+.\src\impulse.vhd=VHDL Source Code
+

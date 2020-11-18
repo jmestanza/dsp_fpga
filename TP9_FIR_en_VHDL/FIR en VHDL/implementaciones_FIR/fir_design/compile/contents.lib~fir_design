@@ -1,0 +1,13 @@
+44
+~E 1 "../src/fir_implementaciones.vhd" 10 fir_entity
+~A 1 "../src/fir_implementaciones.vhd" 62 csd_and_symmetry_fir
+~A 1 "../src/fir_implementaciones.vhd" 81 csd_sym_pipeline_fir
+~A 1 "../src/fir_implementaciones.vhd" 22 naive_fir
+~A 1 "../src/fir_implementaciones.vhd" 43 symmetric_fir
+~E 1 "../src/fir_implementaciones_tb.vhd" 33 fir_testbench
+~A 1 "../src/fir_implementaciones_tb.vhd" 10 tb_implementation
+~E 1 "../src/impulse.vhd" 10 impulse_entity
+~A 1 "../src/impulse.vhd" 15 impulse_implementation
+~A 1 "../src/impulse.vhd" 15 sample_implementation
+~E 1 "../src/fir_implementaciones_tb.vhd" 11 sample_testbench
+~A 1 "../src/rta_al_impulso.vhd" 15 sample_implementation

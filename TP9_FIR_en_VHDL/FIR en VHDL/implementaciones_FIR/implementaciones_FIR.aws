@@ -1,0 +1,12 @@
+[Version]
+Version=11.1
+[Designs]
+fir_design=.\fir_design\fir_design.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+fir_design=1
