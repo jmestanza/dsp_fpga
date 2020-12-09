@@ -82,5 +82,6 @@ def create_module(name, filter_file, input_size=107):
 
     # close file
     f.close()
+
 # generate rom from full bitmap image
 create_module("sobel_edge_detect_Y_filter_module", "../filtros/sobel_edge_detect_Y.txt")
