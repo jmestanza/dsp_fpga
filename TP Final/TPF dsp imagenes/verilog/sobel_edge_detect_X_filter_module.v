@@ -28,20 +28,20 @@ module sobel_edge_detect_X_filter_module
 		if (reset) begin
 			filter_rgb_out <= 0;
 		end else begin
-			upleft <= color_data[47:36]
-			up <= color_data[71:60]
-			upright <= color_data[35:24]
-			left <= color_data[95:84]
-			original <= color_data[107:96]
-			right <= color_data[83:72]
-			downleft <= color_data[23:12]
-			down <= color_data[59:48]
-			downright <= color_data[11:0]
-			original_out <= color_data[11:0]
+			upleft <= color_data[47:36];
+			up <= color_data[71:60];
+			upright <= color_data[35:24];
+			left <= color_data[95:84];
+			original <= color_data[107:96];
+			right <= color_data[83:72];
+			downleft <= color_data[23:12];
+			down <= color_data[59:48];
+			downright <= color_data[11:0];
+			original_out <= color_data[11:0];
 
-	red <= (-1*upleft[11:8])+(-2*up[11:8])+(-1*upright[11:8])+(0*left[11:8])+(0*original[11:8])+(0*right[11:8])+(1*downleft[11:8])+(2*down[11:8])+(1*downright[11:8]) ;
-	green <= (-1*upleft[7:4])+(-2*up[7:4])+(-1*upright[7:4])+(0*left[7:4])+(0*original[7:4])+(0*right[7:4])+(1*downleft[7:4])+(2*down[7:4])+(1*downright[7:4]) ;
-	blue <= (-1*upleft[3:0])+(-2*up[3:0])+(-1*upright[3:0])+(0*left[3:0])+(0*original[3:0])+(0*right[3:0])+(1*downleft[3:0])+(2*down[3:0])+(1*downright[3:0]) ;
+			red <= (-1*upleft[11:8])+(-2*up[11:8])+(-1*upright[11:8])+(0*left[11:8])+(0*original[11:8])+(0*right[11:8])+(1*downleft[11:8])+(2*down[11:8])+(1*downright[11:8]) ;
+			green <= (-1*upleft[7:4])+(-2*up[7:4])+(-1*upright[7:4])+(0*left[7:4])+(0*original[7:4])+(0*right[7:4])+(1*downleft[7:4])+(2*down[7:4])+(1*downright[7:4]) ;
+			blue <= (-1*upleft[3:0])+(-2*up[3:0])+(-1*upright[3:0])+(0*left[3:0])+(0*original[3:0])+(0*right[3:0])+(1*downleft[3:0])+(2*down[3:0])+(1*downright[3:0]) ;
 
 
 			red_filtered <= red > 255 ? 255: (red > 0 ? red: 0);

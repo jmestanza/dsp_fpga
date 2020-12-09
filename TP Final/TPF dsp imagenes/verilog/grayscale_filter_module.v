@@ -28,16 +28,16 @@ module grayscale_filter_module
 		if (reset) begin
 			filter_rgb_out <= 0;
 		end else begin
-			upleft <= color_data[47:36]
-			up <= color_data[71:60]
-			upright <= color_data[35:24]
-			left <= color_data[95:84]
-			original <= color_data[107:96]
-			right <= color_data[83:72]
-			downleft <= color_data[23:12]
-			down <= color_data[59:48]
-			downright <= color_data[11:0]
-			original_out <= color_data[11:0]
+			upleft <= color_data[47:36];
+			up <= color_data[71:60];
+			upright <= color_data[35:24];
+			left <= color_data[95:84];
+			original <= color_data[107:96];
+			right <= color_data[83:72];
+			downleft <= color_data[23:12];
+			down <= color_data[59:48];
+			downright <= color_data[11:0];
+			original_out <= color_data[11:0];
 
 			red <= (original[11:8]) / 3;
 			green <= (original[7:4]) / 5;
