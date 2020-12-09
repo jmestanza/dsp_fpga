@@ -34,11 +34,19 @@ set_property ip_output_repo c:/vivado_projects/VGA_driver/VGA_driver.cache/ip [c
 set_property ip_cache_permissions {read write} [current_project]
 add_files C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/flor128_rom.coe
 read_verilog -library xil_defaultlib {
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/blue_filter_module.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/colorinv_filter_module.v
   C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/edge_detect_filter.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/green_filter_module.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/high_bust_A9.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/promediador_filter_module.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/red_filter_module.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/sobel_edge_detect_X_filter_module.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/sobel_edge_detect_Y_filter_module.v
   C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/vga_sync.v
   C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/vga_test.v
 }
-read_ip -quiet c:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+read_ip -quiet C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
 set_property used_in_implementation false [get_files -all c:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

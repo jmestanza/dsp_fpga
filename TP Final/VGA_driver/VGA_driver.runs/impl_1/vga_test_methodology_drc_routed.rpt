@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Wed Dec  9 15:16:22 2020
+| Date         : Wed Dec  9 18:45:05 2020
 | Host         : J running 64-bit major release  (build 9200)
 | Command      : report_methodology -file vga_test_methodology_drc_routed.rpt -pb vga_test_methodology_drc_routed.pb -rpx vga_test_methodology_drc_routed.rpx
 | Design       : vga_test
@@ -23,13 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 149
+             Violations found: 332
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| SYNTH-11  | Warning  | DSP output not registered     | 24         |
-| SYNTH-13  | Warning  | combinational multiplier      | 24         |
-| TIMING-16 | Warning  | Large setup violation         | 86         |
+| SYNTH-11  | Warning  | DSP output not registered     | 90         |
+| TIMING-16 | Warning  | Large setup violation         | 227        |
 | TIMING-18 | Warning  | Missing input or output delay | 15         |
 +-----------+----------+-------------------------------+------------+
 
@@ -37,672 +36,1587 @@ Table of Contents
 -----------------
 SYNTH-11#1 Warning
 DSP output not registered  
-DSP instance filter0/blue1 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/blue1 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#2 Warning
 DSP output not registered  
-DSP instance filter0/blue2 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/blue1__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#3 Warning
 DSP output not registered  
-DSP instance filter0/blue3 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/blue2 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#4 Warning
 DSP output not registered  
-DSP instance filter0/blue4 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/blue2__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#5 Warning
 DSP output not registered  
-DSP instance filter0/blue6 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/blue3 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#6 Warning
 DSP output not registered  
-DSP instance filter0/blue7 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/blue3__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#7 Warning
 DSP output not registered  
-DSP instance filter0/blue8 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/blue4 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#8 Warning
 DSP output not registered  
-DSP instance filter0/blue8__1 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/blue4__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#9 Warning
 DSP output not registered  
-DSP instance filter0/green1 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/blue6 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#10 Warning
 DSP output not registered  
-DSP instance filter0/green2 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/blue6__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#11 Warning
 DSP output not registered  
-DSP instance filter0/green3 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/blue7 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#12 Warning
 DSP output not registered  
-DSP instance filter0/green4 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/blue7__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#13 Warning
 DSP output not registered  
-DSP instance filter0/green6 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/blue8 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#14 Warning
 DSP output not registered  
-DSP instance filter0/green7 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/blue8__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#15 Warning
 DSP output not registered  
-DSP instance filter0/green8 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/blue8__1 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#16 Warning
 DSP output not registered  
-DSP instance filter0/green8__1 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/blue8__2 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#17 Warning
 DSP output not registered  
-DSP instance filter0/red1 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/green1 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#18 Warning
 DSP output not registered  
-DSP instance filter0/red2 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/green1__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#19 Warning
 DSP output not registered  
-DSP instance filter0/red3 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/green2 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#20 Warning
 DSP output not registered  
-DSP instance filter0/red4 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/green2__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#21 Warning
 DSP output not registered  
-DSP instance filter0/red6 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/green3 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#22 Warning
 DSP output not registered  
-DSP instance filter0/red7 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/green3__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#23 Warning
 DSP output not registered  
-DSP instance filter0/red8 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/green4 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 SYNTH-11#24 Warning
 DSP output not registered  
-DSP instance filter0/red8__1 is not fully pipelined on the output side. MREG/PREG are not used.
+DSP instance edge_detect/green4__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#1 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/blue1__0.
+SYNTH-11#25 Warning
+DSP output not registered  
+DSP instance edge_detect/green6 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#2 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/blue2__0.
+SYNTH-11#26 Warning
+DSP output not registered  
+DSP instance edge_detect/green6__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#3 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/blue3__0.
+SYNTH-11#27 Warning
+DSP output not registered  
+DSP instance edge_detect/green7 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#4 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/blue4__0.
+SYNTH-11#28 Warning
+DSP output not registered  
+DSP instance edge_detect/green7__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#5 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/blue6__0.
+SYNTH-11#29 Warning
+DSP output not registered  
+DSP instance edge_detect/green8 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#6 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/blue7__0.
+SYNTH-11#30 Warning
+DSP output not registered  
+DSP instance edge_detect/green8__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#7 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/blue8__0.
+SYNTH-11#31 Warning
+DSP output not registered  
+DSP instance edge_detect/green8__1 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#8 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/blue8__2.
+SYNTH-11#32 Warning
+DSP output not registered  
+DSP instance edge_detect/green8__2 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#9 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/green1__0.
+SYNTH-11#33 Warning
+DSP output not registered  
+DSP instance edge_detect/red1 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#10 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/green2__0.
+SYNTH-11#34 Warning
+DSP output not registered  
+DSP instance edge_detect/red1__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#11 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/green3__0.
+SYNTH-11#35 Warning
+DSP output not registered  
+DSP instance edge_detect/red2 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#12 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/green4__0.
+SYNTH-11#36 Warning
+DSP output not registered  
+DSP instance edge_detect/red2__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#13 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/green6__0.
+SYNTH-11#37 Warning
+DSP output not registered  
+DSP instance edge_detect/red3 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#14 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/green7__0.
+SYNTH-11#38 Warning
+DSP output not registered  
+DSP instance edge_detect/red3__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#15 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/green8__0.
+SYNTH-11#39 Warning
+DSP output not registered  
+DSP instance edge_detect/red4 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#16 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/green8__2.
+SYNTH-11#40 Warning
+DSP output not registered  
+DSP instance edge_detect/red4__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#17 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/red1__0.
+SYNTH-11#41 Warning
+DSP output not registered  
+DSP instance edge_detect/red6 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#18 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/red2__0.
+SYNTH-11#42 Warning
+DSP output not registered  
+DSP instance edge_detect/red6__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#19 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/red3__0.
+SYNTH-11#43 Warning
+DSP output not registered  
+DSP instance edge_detect/red7 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#20 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/red4__0.
+SYNTH-11#44 Warning
+DSP output not registered  
+DSP instance edge_detect/red7__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#21 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/red6__0.
+SYNTH-11#45 Warning
+DSP output not registered  
+DSP instance edge_detect/red8 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#22 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/red7__0.
+SYNTH-11#46 Warning
+DSP output not registered  
+DSP instance edge_detect/red8__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#23 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/red8__0.
+SYNTH-11#47 Warning
+DSP output not registered  
+DSP instance nolabel_line61/blue1 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
-SYNTH-13#24 Warning
-combinational multiplier  
-Detected combinational multiplier in DSP instance filter0/red8__2.
+SYNTH-11#48 Warning
+DSP output not registered  
+DSP instance nolabel_line61/blue1__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#49 Warning
+DSP output not registered  
+DSP instance nolabel_line61/blue2 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#50 Warning
+DSP output not registered  
+DSP instance nolabel_line61/blue2__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#51 Warning
+DSP output not registered  
+DSP instance nolabel_line61/blue3 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#52 Warning
+DSP output not registered  
+DSP instance nolabel_line61/blue3__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#53 Warning
+DSP output not registered  
+DSP instance nolabel_line61/blue4 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#54 Warning
+DSP output not registered  
+DSP instance nolabel_line61/blue4__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#55 Warning
+DSP output not registered  
+DSP instance nolabel_line61/blue6 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#56 Warning
+DSP output not registered  
+DSP instance nolabel_line61/blue6__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#57 Warning
+DSP output not registered  
+DSP instance nolabel_line61/blue7 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#58 Warning
+DSP output not registered  
+DSP instance nolabel_line61/blue7__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#59 Warning
+DSP output not registered  
+DSP instance nolabel_line61/blue8 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#60 Warning
+DSP output not registered  
+DSP instance nolabel_line61/blue8__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#61 Warning
+DSP output not registered  
+DSP instance nolabel_line61/blue8__1 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#62 Warning
+DSP output not registered  
+DSP instance nolabel_line61/blue8__2 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#63 Warning
+DSP output not registered  
+DSP instance nolabel_line61/green1 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#64 Warning
+DSP output not registered  
+DSP instance nolabel_line61/green1__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#65 Warning
+DSP output not registered  
+DSP instance nolabel_line61/green2 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#66 Warning
+DSP output not registered  
+DSP instance nolabel_line61/green2__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#67 Warning
+DSP output not registered  
+DSP instance nolabel_line61/green3 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#68 Warning
+DSP output not registered  
+DSP instance nolabel_line61/green3__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#69 Warning
+DSP output not registered  
+DSP instance nolabel_line61/green4 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#70 Warning
+DSP output not registered  
+DSP instance nolabel_line61/green4__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#71 Warning
+DSP output not registered  
+DSP instance nolabel_line61/green6 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#72 Warning
+DSP output not registered  
+DSP instance nolabel_line61/green6__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#73 Warning
+DSP output not registered  
+DSP instance nolabel_line61/green7 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#74 Warning
+DSP output not registered  
+DSP instance nolabel_line61/green7__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#75 Warning
+DSP output not registered  
+DSP instance nolabel_line61/green8 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#76 Warning
+DSP output not registered  
+DSP instance nolabel_line61/green8__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#77 Warning
+DSP output not registered  
+DSP instance nolabel_line61/green8__1 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#78 Warning
+DSP output not registered  
+DSP instance nolabel_line61/green8__2 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#79 Warning
+DSP output not registered  
+DSP instance nolabel_line61/red1 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#80 Warning
+DSP output not registered  
+DSP instance nolabel_line61/red1__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#81 Warning
+DSP output not registered  
+DSP instance nolabel_line61/red2 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#82 Warning
+DSP output not registered  
+DSP instance nolabel_line61/red2__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#83 Warning
+DSP output not registered  
+DSP instance nolabel_line61/red3 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#84 Warning
+DSP output not registered  
+DSP instance nolabel_line61/red3__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#85 Warning
+DSP output not registered  
+DSP instance nolabel_line61/red4 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#86 Warning
+DSP output not registered  
+DSP instance nolabel_line61/red4__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#87 Warning
+DSP output not registered  
+DSP instance nolabel_line61/red6 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#88 Warning
+DSP output not registered  
+DSP instance nolabel_line61/red6__0 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#89 Warning
+DSP output not registered  
+DSP instance nolabel_line61/red7 is not fully pipelined on the output side. MREG/PREG are not used.
+Related violations: <none>
+
+SYNTH-11#90 Warning
+DSP output not registered  
+DSP instance nolabel_line61/red7__0 is not fully pipelined on the output side. MREG/PREG are not used.
 Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -1.199 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.030 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_y/red_reg[21]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -1.366 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.040 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_y/green_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -1.574 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.104 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_x/green_reg[21]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -1.781 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.135 ns between nolabel_line63/upleft_reg[1]/C (clocked by sys_clk_pin) and sobel_x/blue_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -1.799 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.153 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_y/red_reg[22]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -1.802 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.172 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_y/green_reg[24]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -1.979 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.173 ns between edge_detect/red1/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -2.134 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.201 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_x/red_reg[22]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#9 Warning
 Large setup violation  
-There is a large setup violation of -2.207 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.237 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#10 Warning
 Large setup violation  
-There is a large setup violation of -2.323 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.243 ns between nolabel_line63/upleft_reg[1]/C (clocked by sys_clk_pin) and sobel_x/blue_reg[30]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#11 Warning
 Large setup violation  
-There is a large setup violation of -2.532 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.246 ns between nolabel_line63/upleft_reg[1]/C (clocked by sys_clk_pin) and sobel_x/blue_reg[29]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#12 Warning
 Large setup violation  
-There is a large setup violation of -2.560 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.255 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_y/red_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#13 Warning
 Large setup violation  
-There is a large setup violation of -2.600 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.266 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_x/red_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#14 Warning
 Large setup violation  
-There is a large setup violation of -2.908 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.283 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_y/green_reg[25]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#15 Warning
 Large setup violation  
-There is a large setup violation of -2.974 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.296 ns between nolabel_line63/upleft_reg[0]/C (clocked by sys_clk_pin) and sobel_y/blue_reg[24]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#16 Warning
 Large setup violation  
-There is a large setup violation of -2.987 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.302 ns between nolabel_line63/upleft_reg[1]/C (clocked by sys_clk_pin) and sobel_x/blue_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#17 Warning
 Large setup violation  
-There is a large setup violation of -2.990 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.326 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#18 Warning
 Large setup violation  
-There is a large setup violation of -3.019 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.376 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_x/red_reg[24]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#19 Warning
 Large setup violation  
-There is a large setup violation of -3.064 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.378 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_x/green_reg[22]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#20 Warning
 Large setup violation  
-There is a large setup violation of -3.085 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.387 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#21 Warning
 Large setup violation  
-There is a large setup violation of -3.139 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.407 ns between nolabel_line63/upleft_reg[0]/C (clocked by sys_clk_pin) and sobel_y/blue_reg[25]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#22 Warning
 Large setup violation  
-There is a large setup violation of -3.199 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.438 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_x/green_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#23 Warning
 Large setup violation  
-There is a large setup violation of -3.364 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.480 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_x/red_reg[25]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#24 Warning
 Large setup violation  
-There is a large setup violation of -3.379 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.500 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#25 Warning
 Large setup violation  
-There is a large setup violation of -3.380 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.501 ns between nolabel_line63/upleft_reg[0]/C (clocked by sys_clk_pin) and sobel_y/blue_reg[26]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#26 Warning
 Large setup violation  
-There is a large setup violation of -3.395 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.560 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_y/green_reg[26]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#27 Warning
 Large setup violation  
-There is a large setup violation of -3.395 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.561 ns between nolabel_line63/upleft_reg[0]/C (clocked by sys_clk_pin) and sobel_y/blue_reg[27]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#28 Warning
 Large setup violation  
-There is a large setup violation of -3.411 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.571 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_x/green_reg[24]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#29 Warning
 Large setup violation  
-There is a large setup violation of -3.454 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.578 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#30 Warning
 Large setup violation  
-There is a large setup violation of -3.469 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.620 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_y/green_reg[27]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#31 Warning
 Large setup violation  
-There is a large setup violation of -3.475 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.668 ns between edge_detect/red1/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#32 Warning
 Large setup violation  
-There is a large setup violation of -3.485 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.672 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_y/red_reg[24]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#33 Warning
 Large setup violation  
-There is a large setup violation of -3.490 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.682 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_x/green_reg[25]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#34 Warning
 Large setup violation  
-There is a large setup violation of -3.506 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.694 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_x/red_reg[26]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#35 Warning
 Large setup violation  
-There is a large setup violation of -3.508 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[16]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.700 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#36 Warning
 Large setup violation  
-There is a large setup violation of -3.524 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[18]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.727 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#37 Warning
 Large setup violation  
-There is a large setup violation of -3.560 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.731 ns between nolabel_line63/upleft_reg[0]/C (clocked by sys_clk_pin) and sobel_y/blue_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#38 Warning
 Large setup violation  
-There is a large setup violation of -3.576 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.751 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_y/green_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#39 Warning
 Large setup violation  
-There is a large setup violation of -3.598 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[19]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.759 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_x/red_reg[27]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#40 Warning
 Large setup violation  
-There is a large setup violation of -3.619 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[17]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.767 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_y/green_reg[30]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#41 Warning
 Large setup violation  
-There is a large setup violation of -3.621 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[20]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.777 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_x/green_reg[26]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#42 Warning
 Large setup violation  
-There is a large setup violation of -3.637 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[22]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.837 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_x/green_reg[27]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#43 Warning
 Large setup violation  
-There is a large setup violation of -3.650 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.841 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_y/green_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#44 Warning
 Large setup violation  
-There is a large setup violation of -3.671 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.842 ns between nolabel_line63/upleft_reg[0]/C (clocked by sys_clk_pin) and sobel_y/blue_reg[29]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#45 Warning
 Large setup violation  
-There is a large setup violation of -3.711 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.849 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_y/red_reg[25]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#46 Warning
 Large setup violation  
-There is a large setup violation of -3.725 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[16]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.862 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_y/green_reg[29]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#47 Warning
 Large setup violation  
-There is a large setup violation of -3.732 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[21]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.869 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_x/red_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#48 Warning
 Large setup violation  
-There is a large setup violation of -3.735 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[24]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.941 ns between nolabel_line63/upleft_reg[0]/C (clocked by sys_clk_pin) and sobel_y/blue_reg[30]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#49 Warning
 Large setup violation  
-There is a large setup violation of -3.741 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[18]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.969 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_x/green_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#50 Warning
 Large setup violation  
-There is a large setup violation of -3.750 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[16]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.972 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_y/red_reg[26]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#51 Warning
 Large setup violation  
-There is a large setup violation of -3.751 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[26]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.973 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_x/red_reg[29]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#52 Warning
 Large setup violation  
-There is a large setup violation of -3.766 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[18]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.985 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_x/green_reg[30]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#53 Warning
 Large setup violation  
-There is a large setup violation of -3.815 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[19]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.001 ns between nolabel_line63/upleft_reg[0]/C (clocked by sys_clk_pin) and sobel_y/blue_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#54 Warning
 Large setup violation  
-There is a large setup violation of -3.825 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[27]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.011 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_x/red_reg[30]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#55 Warning
 Large setup violation  
-There is a large setup violation of -3.836 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[17]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.030 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#56 Warning
 Large setup violation  
-There is a large setup violation of -3.839 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[20]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.031 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_y/red_reg[27]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#57 Warning
 Large setup violation  
-There is a large setup violation of -3.840 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[19]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.041 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#58 Warning
 Large setup violation  
-There is a large setup violation of -3.846 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[25]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.059 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_x/green_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#59 Warning
 Large setup violation  
-There is a large setup violation of -3.848 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.062 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#60 Warning
 Large setup violation  
-There is a large setup violation of -3.855 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[22]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.076 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_x/red_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#61 Warning
 Large setup violation  
-There is a large setup violation of -3.861 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[17]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.080 ns between nolabel_line63/upleft_reg[6]/C (clocked by sys_clk_pin) and sobel_x/green_reg[29]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#62 Warning
 Large setup violation  
-There is a large setup violation of -3.862 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[20]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.180 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_y/red_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#63 Warning
 Large setup violation  
-There is a large setup violation of -3.864 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[30]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.276 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#64 Warning
 Large setup violation  
-There is a large setup violation of -3.878 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[22]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.291 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_y/red_reg[29]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#65 Warning
 Large setup violation  
-There is a large setup violation of -3.929 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.315 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_y/red_reg[30]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#66 Warning
 Large setup violation  
-There is a large setup violation of -3.938 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.375 ns between nolabel_line63/upleft_reg[8]/C (clocked by sys_clk_pin) and sobel_y/red_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#67 Warning
 Large setup violation  
-There is a large setup violation of -3.950 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[21]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.378 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#68 Warning
 Large setup violation  
-There is a large setup violation of -3.952 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.410 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#69 Warning
 Large setup violation  
-There is a large setup violation of -3.953 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[24]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.444 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#70 Warning
 Large setup violation  
-There is a large setup violation of -3.959 ns between filter0/green8__1/CLK (clocked by sys_clk_pin) and filter0/green_reg[29]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.450 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#71 Warning
 Large setup violation  
-There is a large setup violation of -3.969 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[26]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.453 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#72 Warning
 Large setup violation  
-There is a large setup violation of -3.973 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[21]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.478 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#73 Warning
 Large setup violation  
-There is a large setup violation of -3.975 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[24]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.485 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#74 Warning
 Large setup violation  
-There is a large setup violation of -3.991 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[26]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.576 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#75 Warning
 Large setup violation  
-There is a large setup violation of -4.043 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[27]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.627 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#76 Warning
 Large setup violation  
-There is a large setup violation of -4.064 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[25]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.635 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#77 Warning
 Large setup violation  
-There is a large setup violation of -4.065 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[27]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.750 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#78 Warning
 Large setup violation  
-There is a large setup violation of -4.068 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.785 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#79 Warning
 Large setup violation  
-There is a large setup violation of -4.084 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[30]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.792 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#80 Warning
 Large setup violation  
-There is a large setup violation of -4.086 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[25]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.805 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#81 Warning
 Large setup violation  
-There is a large setup violation of -4.087 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.809 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#82 Warning
 Large setup violation  
-There is a large setup violation of -4.103 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[30]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.819 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#83 Warning
 Large setup violation  
-There is a large setup violation of -4.158 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.829 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#84 Warning
 Large setup violation  
-There is a large setup violation of -4.177 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.833 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#85 Warning
 Large setup violation  
-There is a large setup violation of -4.179 ns between filter0/red8__1/CLK (clocked by sys_clk_pin) and filter0/red_reg[29]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.883 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#86 Warning
 Large setup violation  
-There is a large setup violation of -4.198 ns between filter0/blue8__1/CLK (clocked by sys_clk_pin) and filter0/blue_reg[29]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -2.898 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#87 Warning
+Large setup violation  
+There is a large setup violation of -2.915 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#88 Warning
+Large setup violation  
+There is a large setup violation of -2.916 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#89 Warning
+Large setup violation  
+There is a large setup violation of -2.923 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#90 Warning
+Large setup violation  
+There is a large setup violation of -2.964 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#91 Warning
+Large setup violation  
+There is a large setup violation of -2.967 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#92 Warning
+Large setup violation  
+There is a large setup violation of -3.008 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#93 Warning
+Large setup violation  
+There is a large setup violation of -3.038 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#94 Warning
+Large setup violation  
+There is a large setup violation of -3.097 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#95 Warning
+Large setup violation  
+There is a large setup violation of -3.112 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#96 Warning
+Large setup violation  
+There is a large setup violation of -3.129 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#97 Warning
+Large setup violation  
+There is a large setup violation of -3.169 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#98 Warning
+Large setup violation  
+There is a large setup violation of -3.172 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#99 Warning
+Large setup violation  
+There is a large setup violation of -3.176 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#100 Warning
+Large setup violation  
+There is a large setup violation of -3.189 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#101 Warning
+Large setup violation  
+There is a large setup violation of -3.192 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#102 Warning
+Large setup violation  
+There is a large setup violation of -3.248 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#103 Warning
+Large setup violation  
+There is a large setup violation of -3.264 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#104 Warning
+Large setup violation  
+There is a large setup violation of -3.273 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#105 Warning
+Large setup violation  
+There is a large setup violation of -3.338 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#106 Warning
+Large setup violation  
+There is a large setup violation of -3.343 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#107 Warning
+Large setup violation  
+There is a large setup violation of -3.359 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#108 Warning
+Large setup violation  
+There is a large setup violation of -3.359 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#109 Warning
+Large setup violation  
+There is a large setup violation of -3.381 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[16]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#110 Warning
+Large setup violation  
+There is a large setup violation of -3.397 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[18]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#111 Warning
+Large setup violation  
+There is a large setup violation of -3.417 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#112 Warning
+Large setup violation  
+There is a large setup violation of -3.422 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#113 Warning
+Large setup violation  
+There is a large setup violation of -3.433 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#114 Warning
+Large setup violation  
+There is a large setup violation of -3.442 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#115 Warning
+Large setup violation  
+There is a large setup violation of -3.454 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#116 Warning
+Large setup violation  
+There is a large setup violation of -3.471 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[19]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#117 Warning
+Large setup violation  
+There is a large setup violation of -3.492 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[17]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#118 Warning
+Large setup violation  
+There is a large setup violation of -3.497 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[20]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#119 Warning
+Large setup violation  
+There is a large setup violation of -3.503 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[16]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#120 Warning
+Large setup violation  
+There is a large setup violation of -3.512 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#121 Warning
+Large setup violation  
+There is a large setup violation of -3.513 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[22]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#122 Warning
+Large setup violation  
+There is a large setup violation of -3.516 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#123 Warning
+Large setup violation  
+There is a large setup violation of -3.518 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#124 Warning
+Large setup violation  
+There is a large setup violation of -3.519 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[18]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#125 Warning
+Large setup violation  
+There is a large setup violation of -3.526 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#126 Warning
+Large setup violation  
+There is a large setup violation of -3.532 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#127 Warning
+Large setup violation  
+There is a large setup violation of -3.540 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[16]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#128 Warning
+Large setup violation  
+There is a large setup violation of -3.550 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#129 Warning
+Large setup violation  
+There is a large setup violation of -3.560 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[18]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#130 Warning
+Large setup violation  
+There is a large setup violation of -3.587 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#131 Warning
+Large setup violation  
+There is a large setup violation of -3.593 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[19]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#132 Warning
+Large setup violation  
+There is a large setup violation of -3.608 ns between nolabel_line61/blue1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[21]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#133 Warning
+Large setup violation  
+There is a large setup violation of -3.608 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#134 Warning
+Large setup violation  
+There is a large setup violation of -3.609 ns between nolabel_line61/blue8__1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[24]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#135 Warning
+Large setup violation  
+There is a large setup violation of -3.614 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[17]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#136 Warning
+Large setup violation  
+There is a large setup violation of -3.615 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#137 Warning
+Large setup violation  
+There is a large setup violation of -3.616 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#138 Warning
+Large setup violation  
+There is a large setup violation of -3.618 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[20]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#139 Warning
+Large setup violation  
+There is a large setup violation of -3.620 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#140 Warning
+Large setup violation  
+There is a large setup violation of -3.625 ns between nolabel_line61/blue8__1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[26]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#141 Warning
+Large setup violation  
+There is a large setup violation of -3.630 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[16]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#142 Warning
+Large setup violation  
+There is a large setup violation of -3.634 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[22]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#143 Warning
+Large setup violation  
+There is a large setup violation of -3.636 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[19]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#144 Warning
+Large setup violation  
+There is a large setup violation of -3.644 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[17]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#145 Warning
+Large setup violation  
+There is a large setup violation of -3.650 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[18]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#146 Warning
+Large setup violation  
+There is a large setup violation of -3.657 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[20]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#147 Warning
+Large setup violation  
+There is a large setup violation of -3.677 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[22]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#148 Warning
+Large setup violation  
+There is a large setup violation of -3.699 ns between nolabel_line61/blue8__1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[27]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#149 Warning
+Large setup violation  
+There is a large setup violation of -3.708 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#150 Warning
+Large setup violation  
+There is a large setup violation of -3.720 ns between nolabel_line61/blue8__1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[25]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#151 Warning
+Large setup violation  
+There is a large setup violation of -3.721 ns between nolabel_line61/blue8__1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#152 Warning
+Large setup violation  
+There is a large setup violation of -3.726 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[19]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#153 Warning
+Large setup violation  
+There is a large setup violation of -3.729 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[21]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#154 Warning
+Large setup violation  
+There is a large setup violation of -3.732 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[24]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#155 Warning
+Large setup violation  
+There is a large setup violation of -3.734 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[17]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#156 Warning
+Large setup violation  
+There is a large setup violation of -3.737 ns between nolabel_line61/blue8__1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[30]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#157 Warning
+Large setup violation  
+There is a large setup violation of -3.748 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[26]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#158 Warning
+Large setup violation  
+There is a large setup violation of -3.748 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[20]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#159 Warning
+Large setup violation  
+There is a large setup violation of -3.753 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#160 Warning
+Large setup violation  
+There is a large setup violation of -3.758 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#161 Warning
+Large setup violation  
+There is a large setup violation of -3.761 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[21]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#162 Warning
+Large setup violation  
+There is a large setup violation of -3.768 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[22]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#163 Warning
+Large setup violation  
+There is a large setup violation of -3.775 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[24]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#164 Warning
+Large setup violation  
+There is a large setup violation of -3.778 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#165 Warning
+Large setup violation  
+There is a large setup violation of -3.795 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[26]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#166 Warning
+Large setup violation  
+There is a large setup violation of -3.808 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#167 Warning
+Large setup violation  
+There is a large setup violation of -3.811 ns between nolabel_line61/blue8__1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#168 Warning
+Large setup violation  
+There is a large setup violation of -3.822 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[27]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#169 Warning
+Large setup violation  
+There is a large setup violation of -3.828 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#170 Warning
+Large setup violation  
+There is a large setup violation of -3.832 ns between nolabel_line61/blue8__1/CLK (clocked by sys_clk_pin) and nolabel_line61/blue_reg[29]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#171 Warning
+Large setup violation  
+There is a large setup violation of -3.843 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[25]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#172 Warning
+Large setup violation  
+There is a large setup violation of -3.844 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#173 Warning
+Large setup violation  
+There is a large setup violation of -3.846 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#174 Warning
+Large setup violation  
+There is a large setup violation of -3.852 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[21]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#175 Warning
+Large setup violation  
+There is a large setup violation of -3.854 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#176 Warning
+Large setup violation  
+There is a large setup violation of -3.862 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#177 Warning
+Large setup violation  
+There is a large setup violation of -3.862 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[30]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#178 Warning
+Large setup violation  
+There is a large setup violation of -3.866 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[24]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#179 Warning
+Large setup violation  
+There is a large setup violation of -3.871 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[27]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#180 Warning
+Large setup violation  
+There is a large setup violation of -3.877 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[16]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#181 Warning
+Large setup violation  
+There is a large setup violation of -3.879 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[25]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#182 Warning
+Large setup violation  
+There is a large setup violation of -3.886 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[26]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#183 Warning
+Large setup violation  
+There is a large setup violation of -3.894 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#184 Warning
+Large setup violation  
+There is a large setup violation of -3.897 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[18]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#185 Warning
+Large setup violation  
+There is a large setup violation of -3.904 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#186 Warning
+Large setup violation  
+There is a large setup violation of -3.912 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#187 Warning
+Large setup violation  
+There is a large setup violation of -3.914 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[30]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#188 Warning
+Large setup violation  
+There is a large setup violation of -3.926 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[16]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#189 Warning
+Large setup violation  
+There is a large setup violation of -3.936 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#190 Warning
+Large setup violation  
+There is a large setup violation of -3.946 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[18]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#191 Warning
+Large setup violation  
+There is a large setup violation of -3.957 ns between nolabel_line61/green1/CLK (clocked by sys_clk_pin) and nolabel_line61/green_reg[29]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#192 Warning
+Large setup violation  
+There is a large setup violation of -3.962 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[27]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#193 Warning
+Large setup violation  
+There is a large setup violation of -3.970 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[25]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#194 Warning
+Large setup violation  
+There is a large setup violation of -3.973 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[19]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#195 Warning
+Large setup violation  
+There is a large setup violation of -3.981 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[17]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#196 Warning
+Large setup violation  
+There is a large setup violation of -3.983 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#197 Warning
+Large setup violation  
+There is a large setup violation of -3.990 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#198 Warning
+Large setup violation  
+There is a large setup violation of -3.995 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[20]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#199 Warning
+Large setup violation  
+There is a large setup violation of -3.998 ns between edge_detect/green1/CLK (clocked by sys_clk_pin) and edge_detect/green_reg[29]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#200 Warning
+Large setup violation  
+There is a large setup violation of -4.015 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[22]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#201 Warning
+Large setup violation  
+There is a large setup violation of -4.022 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[19]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#202 Warning
+Large setup violation  
+There is a large setup violation of -4.030 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[17]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#203 Warning
+Large setup violation  
+There is a large setup violation of -4.044 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[20]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#204 Warning
+Large setup violation  
+There is a large setup violation of -4.064 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[22]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#205 Warning
+Large setup violation  
+There is a large setup violation of -4.087 ns between nolabel_line61/red1/CLK (clocked by sys_clk_pin) and nolabel_line61/red_reg[29]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#206 Warning
+Large setup violation  
+There is a large setup violation of -4.091 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#207 Warning
+Large setup violation  
+There is a large setup violation of -4.099 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[21]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#208 Warning
+Large setup violation  
+There is a large setup violation of -4.114 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[24]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#209 Warning
+Large setup violation  
+There is a large setup violation of -4.134 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[26]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#210 Warning
+Large setup violation  
+There is a large setup violation of -4.140 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[23]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#211 Warning
+Large setup violation  
+There is a large setup violation of -4.148 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[21]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#212 Warning
+Large setup violation  
+There is a large setup violation of -4.163 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[24]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#213 Warning
+Large setup violation  
+There is a large setup violation of -4.183 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[26]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#214 Warning
+Large setup violation  
+There is a large setup violation of -4.210 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[27]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#215 Warning
+Large setup violation  
+There is a large setup violation of -4.216 ns between nolabel_line63/upleft_reg[9]/C (clocked by sys_clk_pin) and nolabel_line61/red_reg[30]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#216 Warning
+Large setup violation  
+There is a large setup violation of -4.218 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[25]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#217 Warning
+Large setup violation  
+There is a large setup violation of -4.253 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#218 Warning
+Large setup violation  
+There is a large setup violation of -4.259 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[27]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#219 Warning
+Large setup violation  
+There is a large setup violation of -4.267 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[25]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#220 Warning
+Large setup violation  
+There is a large setup violation of -4.273 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[30]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#221 Warning
+Large setup violation  
+There is a large setup violation of -4.279 ns between nolabel_line63/upleft_reg[9]/C (clocked by sys_clk_pin) and nolabel_line61/red_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#222 Warning
+Large setup violation  
+There is a large setup violation of -4.281 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[28]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#223 Warning
+Large setup violation  
+There is a large setup violation of -4.301 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[30]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#224 Warning
+Large setup violation  
+There is a large setup violation of -4.349 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#225 Warning
+Large setup violation  
+There is a large setup violation of -4.357 ns between edge_detect/red8/CLK (clocked by sys_clk_pin) and edge_detect/red_reg[29]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#226 Warning
+Large setup violation  
+There is a large setup violation of -4.377 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#227 Warning
+Large setup violation  
+There is a large setup violation of -4.385 ns between edge_detect/blue1/CLK (clocked by sys_clk_pin) and edge_detect/blue_reg[29]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning

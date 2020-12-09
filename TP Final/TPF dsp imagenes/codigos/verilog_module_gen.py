@@ -49,16 +49,16 @@ def create_module(name, filter_file, input_size=107):
     f.write("if (reset) begin\n\t\t\t")
     f.write("filter_rgb_out <= 0;\n\t\t")
     f.write("end else begin\n\t\t\t")
-    f.write("upleft <= color_data[47:36]\n\t\t\t")
-    f.write("up <= color_data[71:60]\n\t\t\t")
-    f.write("upright <= color_data[35:24]\n\t\t\t")
-    f.write("left <= color_data[95:84]\n\t\t\t")
-    f.write("original <= color_data[107:96]\n\t\t\t")
-    f.write("right <= color_data[83:72]\n\t\t\t")
-    f.write("downleft <= color_data[23:12]\n\t\t\t")
-    f.write("down <= color_data[59:48]\n\t\t\t")
-    f.write("downright <= color_data[11:0]\n\t\t\t")
-    f.write("original_out <= color_data[11:0]\n\n")
+    f.write("upleft <= color_data[47:36];\n\t\t\t")
+    f.write("up <= color_data[71:60];\n\t\t\t")
+    f.write("upright <= color_data[35:24];\n\t\t\t")
+    f.write("left <= color_data[95:84];\n\t\t\t")
+    f.write("original <= color_data[107:96];\n\t\t\t")
+    f.write("right <= color_data[83:72];\n\t\t\t")
+    f.write("downleft <= color_data[23:12];\n\t\t\t")
+    f.write("down <= color_data[59:48];\n\t\t\t")
+    f.write("downright <= color_data[11:0];\n\t\t\t")
+    f.write("original_out <= color_data[11:0];\n\n")
 
     # FILTER
     filter_f = open(filter_file, "r")
@@ -83,4 +83,6 @@ def create_module(name, filter_file, input_size=107):
     # close file
     f.close()
 # generate rom from full bitmap image
-create_module("sobel_edge_detect_Y_filter_module", "../filtros/sobel_edge_detect_Y.txt")
+# create_module("sobel_edge_detect_Y_filter_module", "../filtros/sobel_edge_detect_Y.txt")
+name = "high_bust_A9" 
+create_module(name, "../filtros/"+name+".txt")

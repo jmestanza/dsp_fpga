@@ -55,7 +55,7 @@ for rgb_color, slice_ in [
     for i in range(len(kernel)):
         for j in range(len(kernel[0])):
             plus = "" if (i == len(kernel) -1 and j == len(kernel[0])-1) else "+" 
-            kernel_str += "(" + str(kernel[i][j])+ "*" + names[i][j] + "[" + slice_ + "]" + ")" + plus  
+            kernel_str += "(" + str(kernel[i][j])+ "*(" + names[i][j] + "[" + slice_ + "] << 4 )" + ")" + plus  
 
     print("\t" + rgb_color + " <=", kernel_str, ";")
 

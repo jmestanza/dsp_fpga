@@ -76,7 +76,7 @@ set rc [catch {
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   add_files -quiet C:/vivado_projects/VGA_driver/VGA_driver.runs/synth_1/vga_test.dcp
-  read_ip -quiet c:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+  read_ip -quiet C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
   read_xdc C:/vivado_projects/VGA_driver/VGA_driver.srcs/constrs_1/new/vga_constraints.xdc
   link_design -top vga_test -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
