@@ -1,0 +1,3 @@
+	red <= original[11:8];
+	green <= 0;
+	blue <= 0;

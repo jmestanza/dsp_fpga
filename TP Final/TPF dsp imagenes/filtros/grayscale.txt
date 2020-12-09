@@ -1,0 +1,4 @@
+	OJO FLOAT MULT: https://stackoverflow.com/questions/28924000/floating-point-numbers-multiplication-in-verilog
+	red <= 0.3*(original[11:8] << 4);
+	green <= 0.59*(original[7:4] << 4);
+	blue <= 0.11*(original[3:0] << 4);
