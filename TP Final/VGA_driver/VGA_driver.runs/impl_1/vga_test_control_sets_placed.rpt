@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Wed Dec  9 18:43:58 2020
+| Date         : Wed Dec  9 20:12:56 2020
 | Host         : J running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file vga_test_control_sets_placed.rpt
 | Design       : vga_test
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               4 |            1 |
-| No           | No                    | Yes                    |              88 |           44 |
+| No           | No                    | No                     |               4 |            3 |
+| No           | No                    | Yes                    |              88 |           53 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |             528 |          174 |
+| Yes          | No                    | No                     |             528 |          176 |
 | Yes          | No                    | Yes                    |              20 |            7 |
-| Yes          | Yes                   | No                     |              72 |           20 |
+| Yes          | Yes                   | No                     |              72 |           22 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,29 +73,29 @@ Table of Contents
 +----------------+--------------------------------------+---------------------------------------------+------------------+----------------+
 |  Clock Signal  |             Enable Signal            |               Set/Reset Signal              | Slice Load Count | Bel Load Count |
 +----------------+--------------------------------------+---------------------------------------------+------------------+----------------+
-|  clk_IBUF_BUFG |                                      |                                             |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | color_inv/green_filtered[7]_i_1__3_n_0      |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | color_inv/blue_filtered[7]_i_1__3_n_0       |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | color_inv/red_filtered[7]_i_1__3_n_0        |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | edge_detect/green_filtered[7]_i_1__1_n_0    |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | edge_detect/red_filtered[7]_i_1__1_n_0      |                2 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line61/red_filtered[7]_i_1__2_n_0   |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line61/blue_filtered[7]_i_1__2_n_0  |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line61/green_filtered[7]_i_1__2_n_0 |                1 |              4 |
+|  clk_IBUF_BUFG |                                      |                                             |                3 |              4 |
 |  clk_IBUF_BUFG | edge_detect/p_0_in                   | edge_detect/blue_filtered[7]_i_1__1_n_0     |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line63/blue_filtered[7]_i_1__4_n_0  |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line63/green_filtered[7]_i_1__4_n_0 |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line63/red_filtered[7]_i_1__4_n_0   |                2 |              4 |
+|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line61/blue_filtered[7]_i_1__2_n_0  |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detect/p_0_in                   | edge_detect/green_filtered[7]_i_1__1_n_0    |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detect/p_0_in                   | edge_detect/red_filtered[7]_i_1__1_n_0      |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line63/blue_filtered[7]_i_1__4_n_0  |                2 |              4 |
+|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line63/green_filtered[7]_i_1__4_n_0 |                2 |              4 |
+|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line63/red_filtered[7]_i_1__4_n_0   |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line61/red_filtered[7]_i_1__2_n_0   |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line61/green_filtered[7]_i_1__2_n_0 |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detect/p_0_in                   | color_inv/blue_filtered[7]_i_1__3_n_0       |                2 |              4 |
+|  clk_IBUF_BUFG | edge_detect/p_0_in                   | color_inv/green_filtered[7]_i_1__3_n_0      |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detect/p_0_in                   | color_inv/red_filtered[7]_i_1__3_n_0        |                2 |              4 |
 |  clk_IBUF_BUFG | edge_detect/p_0_in                   | sobel_x/blue_filtered[7]_i_1__0_n_0         |                1 |              4 |
 |  clk_IBUF_BUFG | edge_detect/p_0_in                   | sobel_x/green_filtered[7]_i_1__0_n_0        |                1 |              4 |
 |  clk_IBUF_BUFG | edge_detect/p_0_in                   | sobel_x/red_filtered[7]_i_1__0_n_0          |                1 |              4 |
 |  clk_IBUF_BUFG | edge_detect/p_0_in                   | sobel_y/blue_filtered[7]_i_1_n_0            |                1 |              4 |
 |  clk_IBUF_BUFG | edge_detect/p_0_in                   | sobel_y/green_filtered[7]_i_1_n_0           |                1 |              4 |
 |  clk_IBUF_BUFG | edge_detect/p_0_in                   | sobel_y/red_filtered[7]_i_1_n_0             |                1 |              4 |
-|  clk_IBUF_BUFG | vga_sync_unit/h_count_reg[9]_i_1_n_0 | reset_IBUF                                  |                3 |             10 |
 |  clk_IBUF_BUFG | vga_sync_unit/v_count_reg0           | reset_IBUF                                  |                4 |             10 |
-|  clk_IBUF_BUFG |                                      | reset_IBUF                                  |               44 |             88 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   |                                             |              174 |            528 |
+|  clk_IBUF_BUFG | vga_sync_unit/h_count_reg[9]_i_1_n_0 | reset_IBUF                                  |                3 |             10 |
+|  clk_IBUF_BUFG |                                      | reset_IBUF                                  |               53 |             88 |
+|  clk_IBUF_BUFG | edge_detect/p_0_in                   |                                             |              176 |            528 |
 +----------------+--------------------------------------+---------------------------------------------+------------------+----------------+
 
 

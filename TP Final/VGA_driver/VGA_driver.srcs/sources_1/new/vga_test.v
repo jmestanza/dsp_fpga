@@ -73,7 +73,7 @@ blk_mem_gen_0 rom_unit (
                 14'b00000000000100: rgb_reg = sobel_x_filter;
                 14'b00000000000101: rgb_reg = sobel_y_filter;
                 14'b00000000000110: rgb_reg = color_inv_filter;
-                14'b00000000000111: rgb_reg = edge_filter; // hightboost
+                14'b00000000000111: rgb_reg = edge_filter;
                 14'b00000000001000: rgb_reg = high_bust;
                 14'b00000000001001: rgb_reg = prom;
            

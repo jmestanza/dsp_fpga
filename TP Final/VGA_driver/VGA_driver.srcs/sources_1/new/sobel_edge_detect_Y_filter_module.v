@@ -39,9 +39,12 @@ module sobel_edge_detect_Y_filter_module
 			downright <= color_data[11:0];
 			original_out <= color_data[11:0];
 
-	red <= (-1*upleft[11:8])+(0*up[11:8])+(1*upright[11:8])+(-2*left[11:8])+(0*original[11:8])+(2*right[11:8])+(-1*downleft[11:8])+(0*down[11:8])+(1*downright[11:8]) ;
-	green <= (-1*upleft[7:4])+(0*up[7:4])+(1*upright[7:4])+(-2*left[7:4])+(0*original[7:4])+(2*right[7:4])+(-1*downleft[7:4])+(0*down[7:4])+(1*downright[7:4]) ;
-	blue <= (-1*upleft[3:0])+(0*up[3:0])+(1*upright[3:0])+(-2*left[3:0])+(0*original[3:0])+(2*right[3:0])+(-1*downleft[3:0])+(0*down[3:0])+(1*downright[3:0]) ;
+// schar kernel
+// https://docs.opencv.org/3.4/d2/d2c/tutorial_sobel_derivatives.html
+
+	red <= ((-3*upleft[11:8])+(-10*up[11:8])+(-3*upright[11:8])+(3*downleft[11:8])+(10*down[11:8])+(3*downright[11:8])) ;
+	green <= ((-3*upleft[7:4])+(-10*up[7:4])+(-3*upright[7:4])+(3*downleft[7:4])+(10*down[7:4])+(3*downright[7:4])) ;
+	blue <= ((-3*upleft[3:0])+(-10*up[3:0])+(-3*upright[3:0])+(3*downleft[3:0])+(10*down[3:0])+(3*downright[3:0])) ;
 
 
 			red_filtered <= red > 255 ? 255: (red > 0 ? red: 0);
