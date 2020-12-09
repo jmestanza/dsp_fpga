@@ -1,0 +1,179 @@
+# Reading pref.tcl
+# do PWMyLED_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/dsp_fpga/PracticaPWMyLED {C:/dsp_fpga/PracticaPWMyLED/ramp.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:43:49 on Nov 26,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/dsp_fpga/PracticaPWMyLED" C:/dsp_fpga/PracticaPWMyLED/ramp.v 
+# -- Compiling module ramp
+# 
+# Top level modules:
+# 	ramp
+# End time: 17:43:49 on Nov 26,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/dsp_fpga/PracticaPWMyLED {C:/dsp_fpga/PracticaPWMyLED/pwm_ip.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:43:50 on Nov 26,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/dsp_fpga/PracticaPWMyLED" C:/dsp_fpga/PracticaPWMyLED/pwm_ip.v 
+# -- Compiling module pwm_ip
+# 
+# Top level modules:
+# 	pwm_ip
+# End time: 17:43:50 on Nov 26,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/dsp_fpga/PracticaPWMyLED {C:/dsp_fpga/PracticaPWMyLED/upcounter20b.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:43:50 on Nov 26,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/dsp_fpga/PracticaPWMyLED" C:/dsp_fpga/PracticaPWMyLED/upcounter20b.v 
+# -- Compiling module upcounter20b
+# 
+# Top level modules:
+# 	upcounter20b
+# End time: 17:43:50 on Nov 26,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/dsp_fpga/PracticaPWMyLED/db {C:/dsp_fpga/PracticaPWMyLED/db/pwm_ip_altpll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:43:50 on Nov 26,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/dsp_fpga/PracticaPWMyLED/db" C:/dsp_fpga/PracticaPWMyLED/db/pwm_ip_altpll.v 
+# -- Compiling module pwm_ip_altpll
+# 
+# Top level modules:
+# 	pwm_ip_altpll
+# End time: 17:43:50 on Nov 26,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/dsp_fpga/PracticaPWMyLED/simulation/modelsim {C:/dsp_fpga/PracticaPWMyLED/simulation/modelsim/posta.vwf.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:43:50 on Nov 26,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/dsp_fpga/PracticaPWMyLED/simulation/modelsim" C:/dsp_fpga/PracticaPWMyLED/simulation/modelsim/posta.vwf.vt 
+# -- Compiling module PWMyLED_vlg_vec_tst
+# 
+# Top level modules:
+# 	PWMyLED_vlg_vec_tst
+# End time: 17:43:51 on Nov 26,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  posta_tb_2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" posta_tb_2 
+# Start time: 17:43:51 on Nov 26,2020
+# ** Error: (vsim-3170) Could not find 'posta_tb_2'.
+#         Searched libraries:
+#             C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/dsp_fpga/PracticaPWMyLED/simulation/modelsim/rtl_work
+#             C:/dsp_fpga/PracticaPWMyLED/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./PWMyLED_run_msim_rtl_verilog.do PAUSED at line 15
+vsim work.ramp
+# vsim work.ramp 
+# Start time: 17:43:51 on Nov 26,2020
+# Loading work.ramp
+add wave -position insertpoint sim:/ramp/*
+run
+force -freeze sim:/ramp/clk 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/ramp/enable 1 0
+force -freeze sim:/ramp/reset 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 18:05:27 on Nov 26,2020, Elapsed time: 0:21:36
+# Errors: 1, Warnings: 0

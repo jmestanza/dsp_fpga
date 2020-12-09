@@ -1,4 +1,4 @@
-28
+29
 ~E 1 "../src/i2smod.vhd" 26 i2s_transceiver
 ~A 1 "../src/i2smod.vhd" 44 logic
 ~E 1 "../src/i2stb.vhd" 30 i2stb

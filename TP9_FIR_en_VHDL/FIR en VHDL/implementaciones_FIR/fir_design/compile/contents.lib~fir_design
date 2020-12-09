@@ -1,4 +1,6 @@
-44
+49
+~E 1 "../src/fir_implementaciones.vhd" 10 fir
+~A 1 "../src/fir_implementaciones.vhd" 21 symmetric_fir
 ~E 1 "../src/fir_implementaciones.vhd" 10 fir_entity
 ~A 1 "../src/fir_implementaciones.vhd" 62 csd_and_symmetry_fir
 ~A 1 "../src/fir_implementaciones.vhd" 81 csd_sym_pipeline_fir

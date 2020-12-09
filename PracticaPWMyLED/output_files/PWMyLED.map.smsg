@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at ramp.v(21): always construct contains both blocking and non-blocking assignments File: C:/dsp_fpga/PracticaPWMyLED/ramp.v Line: 21

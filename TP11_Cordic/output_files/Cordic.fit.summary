@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Nov 19 19:24:08 2020
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : Cordic
+Top-level Entity Name : Cordic
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 486 / 22,320 ( 2 % )
+    Total combinational functions : 461 / 22,320 ( 2 % )
+    Dedicated logic registers : 318 / 22,320 ( 1 % )
+Total registers : 318
+Total pins : 32 / 154 ( 21 % )
+Total virtual pins : 0
+Total memory bits : 576 / 608,256 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

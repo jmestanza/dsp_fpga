@@ -25,6 +25,6 @@ FAMILY=
 [SpecTracer]
 WindowVisible=0
 [HierarchyViewer]
-HierarchyInformation=prueba_i2stb|prueba1|0  
+HierarchyInformation=prueba_i2stb|prueba1|0   
 ShowHide=ShowTopLevel
 Selected=

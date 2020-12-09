@@ -7,5 +7,5 @@ C:\Aldec\Active-HDL-Student-Edition\vlib\ieee/src/arith_p.vhd=S
 C:\Aldec\Active-HDL-Student-Edition\vlib\ieee/src/arith_b.vhd=S
 C:\Aldec\Active-HDL-Student-Edition\vlib\ieee/src/unsigned_p.vhd=S
 C:\Aldec\Active-HDL-Student-Edition\vlib\ieee/src/unsigned_b.vhd=S
-C:\My_Designs\contador_with_testbench\contador/src/contador_module.vhd=S
-C:\My_Designs\contador_with_testbench\contador/src/contador_test_bench.vhd=S
+C:\dsp_fpga\TP7_Contador\contador_basico_with_testbench\contador/src/contador_module.vhd=S
+C:\dsp_fpga\TP7_Contador\contador_basico_with_testbench\contador/src/contador_test_bench.vhd=S

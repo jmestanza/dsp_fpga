@@ -29,6 +29,6 @@ FAMILY=
 [SpecTracer]
 WindowVisible=0
 [HierarchyViewer]
-HierarchyInformation=prueba_4bit|prueba1|0      
+HierarchyInformation=prueba_4bit|prueba1|0       
 ShowHide=ShowTopLevel
 Selected=

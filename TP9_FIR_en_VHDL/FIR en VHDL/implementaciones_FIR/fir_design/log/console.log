@@ -1,5 +1,22 @@
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
+acom -O3 -e 100 -work fir_design -2002  $dsn/src/fir_implementaciones.vhd $dsn/src/fir_implementaciones_tb.vhd $dsn/src/impulse.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/fir_implementaciones.vhd
+# Compile Package "eight_bit_int"
+# Compile Entity "fir_entity"
+# Compile Architecture "naive_fir" of Entity "fir_entity"
+# Compile Architecture "symmetric_fir" of Entity "fir_entity"
+# Compile Architecture "csd_and_symmetry_fir" of Entity "fir_entity"
+# Compile Architecture "csd_sym_pipeline_fir" of Entity "fir_entity"
+# File: C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/fir_implementaciones_tb.vhd
+# Compile Entity "fir_testbench"
+# Compile Architecture "tb_implementation" of Entity "fir_testbench"
+# File: C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/impulse.vhd
+# Compile Package "eight_bit_int"
+# Compile Entity "impulse_entity"
+# Compile Architecture "impulse_implementation" of Entity "impulse_entity"
+# Compile success 0 Errors 0 Warnings  Analysis time :  62.0 [ms]
 asim -O5 +access +r +m+fir_testbench fir_testbench tb_implementation
 # ELBREAD: Elaboration process.
 # ELBREAD: Elaboration time 0.0 [s].
@@ -21,8 +38,8 @@ asim -O5 +access +r +m+fir_testbench fir_testbench tb_implementation
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
 # KERNEL: Kernel process initialization done.
 # Allocation: Simulator allocated 7074 kB (elbread=1280 elab2=5656 kernel=137 sdf=0)
-# KERNEL: ASDB file was created in location C:\dsp_fpga\FIR en VHDL\implementaciones_FIR\fir_design\src\wave.asdb
-#  10:11 PM, Tuesday, November 17, 2020
+# KERNEL: ASDB file was created in location C:\dsp_fpga\TP9_FIR_en_VHDL\FIR en VHDL\implementaciones_FIR\fir_design\src\wave.asdb
+#  9:04 PM, Thursday, November 26, 2020
 #  Simulation has been initialized
 # add wave -noreg {/fir_testbench/impulse}
 # add wave -noreg {/fir_testbench/result1}
@@ -31,6 +48,78 @@ asim -O5 +access +r +m+fir_testbench fir_testbench tb_implementation
 # add wave -noreg {/fir_testbench/result4}
 # add wave -noreg {/fir_testbench/clk}
 # 6 signal(s) traced.
-# Waveform file 'untitled.awc' connected to 'C:/dsp_fpga/FIR en VHDL/implementaciones_FIR/fir_design/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/wave.asdb'.
 run 100 ns
 # KERNEL: stopped at time: 100 ns
+endsim
+# VSIM: Simulation has finished.
+acom -O3 -e 100 -work fir_design -2002  $dsn/src/fir_implementaciones.vhd $dsn/src/fir_implementaciones_tb.vhd $dsn/src/impulse.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/fir_implementaciones.vhd
+# Compile Package "eight_bit_int"
+# Compile Entity "fir"
+# Compile Architecture "symmetric_fir" of Entity "fir"
+# File: C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/fir_implementaciones_tb.vhd
+# Compile Entity "fir_testbench"
+# Compile Architecture "tb_implementation" of Entity "fir_testbench"
+# File: C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/impulse.vhd
+# Compile Package "eight_bit_int"
+# Warning: COMP96_0994: impulse.vhd : (1, 1): Multiple package "eight_bit_int" found in "C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/impulse.vhd", "C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/fir_implementaciones.vhd".
+# Compile Entity "impulse_entity"
+# Compile Architecture "impulse_implementation" of Entity "impulse_entity"
+# Compile success 0 Errors 1 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work fir_design -2002  $dsn/src/fir_implementaciones.vhd $dsn/src/fir_implementaciones_tb.vhd $dsn/src/impulse.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/fir_implementaciones.vhd
+# Compile Package "eight_bit_int"
+# Compile Entity "fir"
+# Compile Architecture "symmetric_fir" of Entity "fir"
+# File: C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/fir_implementaciones_tb.vhd
+# Compile Entity "fir_testbench"
+# Compile Architecture "tb_implementation" of Entity "fir_testbench"
+# File: C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/impulse.vhd
+# Compile Package "eight_bit_int"
+# Warning: COMP96_0994: impulse.vhd : (1, 1): Multiple package "eight_bit_int" found in "C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/impulse.vhd", "C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/fir_implementaciones.vhd".
+# Compile Entity "impulse_entity"
+# Compile Architecture "impulse_implementation" of Entity "impulse_entity"
+# Compile success 0 Errors 1 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work fir_design -2002  $dsn/src/fir_implementaciones.vhd $dsn/src/fir_implementaciones_tb.vhd $dsn/src/impulse.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/fir_implementaciones.vhd
+# Compile Package "eight_bit_int"
+# Compile Entity "fir"
+# Compile Architecture "symmetric_fir" of Entity "fir"
+# File: C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/fir_implementaciones_tb.vhd
+# Compile Entity "fir_testbench"
+# Compile Architecture "tb_implementation" of Entity "fir_testbench"
+# File: C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/impulse.vhd
+# Compile Package "eight_bit_int"
+# Warning: COMP96_0994: impulse.vhd : (1, 1): Multiple package "eight_bit_int" found in "C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/impulse.vhd", "C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/fir_implementaciones.vhd".
+# Compile Entity "impulse_entity"
+# Compile Architecture "impulse_implementation" of Entity "impulse_entity"
+# Compile success 0 Errors 1 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work fir_design -2002  $dsn/src/fir_implementaciones.vhd $dsn/src/fir_implementaciones_tb.vhd $dsn/src/impulse.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/fir_implementaciones.vhd
+# Compile Package "eight_bit_int"
+# Compile Entity "fir"
+# Compile Architecture "symmetric_fir" of Entity "fir"
+# File: C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/fir_implementaciones_tb.vhd
+# Compile Entity "fir_testbench"
+# Compile Architecture "tb_implementation" of Entity "fir_testbench"
+# File: C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/impulse.vhd
+# Compile Package "eight_bit_int"
+# Warning: COMP96_0994: impulse.vhd : (1, 1): Multiple package "eight_bit_int" found in "C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/impulse.vhd", "C:/dsp_fpga/TP9_FIR_en_VHDL/FIR en VHDL/implementaciones_FIR/fir_design/src/fir_implementaciones.vhd".
+# Compile Entity "impulse_entity"
+# Compile Architecture "impulse_implementation" of Entity "impulse_entity"
+# Compile success 0 Errors 1 Warnings  Analysis time :  32.0 [ms]
+asim -O5 +access +r +m+fir_testbench fir_testbench tb_implementation
+# ELBREAD: Elaboration process.
+# ELBREAD: Error: The contents of package 'fir_design.eight_bit_int' referenced in entity 'fir' differ from the contents available during the compilation of this entity.
+# ELBREAD: Error: Elaboration process completed with errors.
+# Design: Error: Elaboration failed
+# Error: VSIM: cannot select specified top-level
+# ELBREAD: Elaboration process.
+# ELBREAD: Error: The contents of package 'fir_design.eight_bit_int' referenced in entity 'fir' differ from the contents available during the compilation of this entity.
+# ELBREAD: Error: Elaboration process completed with errors.
+# Design: Error: Elaboration failed

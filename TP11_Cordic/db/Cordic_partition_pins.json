@@ -1,0 +1,153 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "outval",
+					"strict" : false
+				},
+				{
+					"name" : "fcos[9]",
+					"strict" : false
+				},
+				{
+					"name" : "fcos[8]",
+					"strict" : false
+				},
+				{
+					"name" : "fcos[7]",
+					"strict" : false
+				},
+				{
+					"name" : "fcos[6]",
+					"strict" : false
+				},
+				{
+					"name" : "fcos[5]",
+					"strict" : false
+				},
+				{
+					"name" : "fcos[4]",
+					"strict" : false
+				},
+				{
+					"name" : "fcos[3]",
+					"strict" : false
+				},
+				{
+					"name" : "fcos[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fcos[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fcos[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fsin[9]",
+					"strict" : false
+				},
+				{
+					"name" : "fsin[8]",
+					"strict" : false
+				},
+				{
+					"name" : "fsin[7]",
+					"strict" : false
+				},
+				{
+					"name" : "fsin[6]",
+					"strict" : false
+				},
+				{
+					"name" : "fsin[5]",
+					"strict" : false
+				},
+				{
+					"name" : "fsin[4]",
+					"strict" : false
+				},
+				{
+					"name" : "fsin[3]",
+					"strict" : false
+				},
+				{
+					"name" : "fsin[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fsin[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fsin[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "clken",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "phi_inc[0]",
+					"strict" : false
+				},
+				{
+					"name" : "phi_inc[5]",
+					"strict" : false
+				},
+				{
+					"name" : "phi_inc[4]",
+					"strict" : false
+				},
+				{
+					"name" : "phi_inc[3]",
+					"strict" : false
+				},
+				{
+					"name" : "phi_inc[2]",
+					"strict" : false
+				},
+				{
+					"name" : "phi_inc[1]",
+					"strict" : false
+				},
+				{
+					"name" : "phi_inc[7]",
+					"strict" : false
+				},
+				{
+					"name" : "phi_inc[6]",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

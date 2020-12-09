@@ -1,70 +1,81 @@
-timestamp=1605661822840
+timestamp=1606435627554
 
 [~A]
-ModifyID=44
+ModifyID=49
 Version=74
 
 [~MFT]
-0=18|0fir_design.mgf|87973|77202
-1=12|1fir_design.mgf|233808|225367
-3=12|3fir_design.mgf|70056|67184
+0=32|0fir_design.mgf|102750|90652
+1=10|1fir_design.mgf|258233|248998
+3=6|3fir_design.mgf|77687|74225
 
 [eight_bit_int]
-E=1*0
-I=0*750
-M=3|0|ve4|1605643612053|../src/fir_implementaciones.vhd|0*440*0x529378722c484c07471b525aec1399785992c0b5|0*652*0x23b75c12e3e89f2ef000564498faa8c2
-R=../src/fir_implementaciones.vhd|1
-Version=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|8dd20b2dfe51c23d735487f122c65e808b8daf9a806e525c8b3ddc6e9a14f4f4b76e3410073c703b7e64b7f418b6dd65
+E=1*257836
+I=0*102708
+M=3|0|ve4|1606435627545|../src/impulse.vhd|0*102424*0x529378722c484c07471b525aec1399785992c0b5|0*102623*0x23b75c12e3e89f2ef000564498faa8c2
+R=../src/impulse.vhd|1
+Version=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|8dd20b2dfe51c23d735487f122c65e808b8daf9a806e525c8b3ddc6e9a14f4f4092709a15f4e7c1332136df08b57d074
+
+[fir]
+A/symmetric_fir=21|../src/fir_implementaciones.vhd|21|1*255391
+BinI32/symmetric_fir=3*76871
+I=0*91236
+I/symmetric_fir=0*100542
+M=11|0|ve4|1606435565449|../src/fir_implementaciones.vhd|0*90903*0x5775e3ac7b557bc78a2f92d40cc577d3e8c4c6aa|0*91148*0x23b75c12e3e89f2ef000564498faa8c2
+M/symmetric_fir=21|0|ve4|1606435627528|../src/fir_implementaciones.vhd|0*91470*0x63a7f4a6c63b69b6868cfb05e4ef79e01b5293d5|0*92000*0x20116f55b147878295aeff36dce7fc50
+R=../src/fir_implementaciones.vhd|10
+Version=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|f901fd78112e8cbd49161df6e7be974c1a2d029cd028081885fff85800c79a5e
+Version/symmetric_fir=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|6cad337a39803708ef65600d813e9c7c2f5e4c0bebbc00f553674f8d77b6bf4f3ff83e44b54ce90c632aad5700e6cc1b
 
 [fir_entity]
-A/csd_and_symmetry_fir=21|../src/fir_implementaciones.vhd|62|1*229730
-A/csd_sym_pipeline_fir=21|../src/fir_implementaciones.vhd|81|1*230897
-A/naive_fir=21|../src/fir_implementaciones.vhd|22|1*227566
-A/symmetric_fir=21|../src/fir_implementaciones.vhd|43|1*228587
-BinI32/csd_and_symmetry_fir=3*68620
-BinI32/csd_sym_pipeline_fir=3*69183
-BinI32/naive_fir=3*67559
-BinI32/symmetric_fir=3*68056
+A/csd_and_symmetry_fir=21|../src/fir_implementaciones.vhd|62|1*236849
+A/csd_sym_pipeline_fir=21|../src/fir_implementaciones.vhd|81|1*238016
+A/naive_fir=21|../src/fir_implementaciones.vhd|22|1*234685
+A/symmetric_fir=21|../src/fir_implementaciones.vhd|43|1*235706
+BinI32/csd_and_symmetry_fir=3*71491
+BinI32/csd_sym_pipeline_fir=3*72054
+BinI32/naive_fir=3*70430
+BinI32/symmetric_fir=3*70927
 I=0*1374
-I/csd_and_symmetry_fir=0*85952
-I/csd_sym_pipeline_fir=0*86214
-I/naive_fir=0*85446
-I/symmetric_fir=0*85697
+I/csd_and_symmetry_fir=0*88747
+I/csd_sym_pipeline_fir=0*89009
+I/naive_fir=0*88241
+I/symmetric_fir=0*88492
 M=11|0|ve4|1605643612058|../src/fir_implementaciones.vhd|0*1013*0xfe7a38121b4a5ab74bf342add6c83501ee8d7980|0*1279*0x23b75c12e3e89f2ef000564498faa8c2
-M/csd_and_symmetry_fir=21|0|ve4|1605661822812|../src/fir_implementaciones.vhd|0*3281*0x78d5f233332d3981f703e446a86046769c4ee012|0*3776*0x20116f55b147878295aeff36dce7fc50
-M/csd_sym_pipeline_fir=21|0|ve4|1605661822816|../src/fir_implementaciones.vhd|0*4157*0xa0ed482d2c2b1d8faeced30991e4c7069cd7f975|0*4713*0x20116f55b147878295aeff36dce7fc50
-M/naive_fir=21|0|ve4|1605661822804|../src/fir_implementaciones.vhd|0*1615*0x8516b5480cf316185b59c2a5130303790a3c9ab0|0*2074*0x20116f55b147878295aeff36dce7fc50
-M/symmetric_fir=21|0|ve4|1605661822808|../src/fir_implementaciones.vhd|0*2433*0xd95d1edcb2b79e830e079f3e5a8e908d395c413a|0*2914*0x20116f55b147878295aeff36dce7fc50
+M/csd_and_symmetry_fir=21|0|ve4|1606435472589|../src/fir_implementaciones.vhd|0*3281*0x78d5f233332d3981f703e446a86046769c4ee012|0*3776*0x20116f55b147878295aeff36dce7fc50
+M/csd_sym_pipeline_fir=21|0|ve4|1606435472593|../src/fir_implementaciones.vhd|0*4157*0xa0ed482d2c2b1d8faeced30991e4c7069cd7f975|0*4713*0x20116f55b147878295aeff36dce7fc50
+M/naive_fir=21|0|ve4|1606435472581|../src/fir_implementaciones.vhd|0*1615*0x8516b5480cf316185b59c2a5130303790a3c9ab0|0*2074*0x20116f55b147878295aeff36dce7fc50
+M/symmetric_fir=21|0|ve4|1606435472585|../src/fir_implementaciones.vhd|0*2433*0xd95d1edcb2b79e830e079f3e5a8e908d395c413a|0*2914*0x20116f55b147878295aeff36dce7fc50
 R=../src/fir_implementaciones.vhd|10
 Version=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|0fcc93cce527629b8265beb8cf93b4489a6607eb5afe253946650f157b1c29d3f6f4b2d2c766671ca031ed569a89765e
-Version/csd_and_symmetry_fir=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|54b8e4ada1e7660169a3cac09bc1d443ea57399ff3211923f563ce4732f51d995a4fc57491e146a6b7a9e767891ddb53
-Version/csd_sym_pipeline_fir=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|664167122cee5f1207cf61364387b9dde33ba52cec2c08e8792f9f0c060f99a43ea7d135f05d659af763b9cd8ba305a6
-Version/naive_fir=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|9e15ea555cb421ca08d28e265004509e5fe0f6cc11f37d48b53e35433dff82a0e6da116300f0d015bcb31e3525b769cb
-Version/symmetric_fir=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|6cad337a39803708ef65600d813e9c7c2f5e4c0bebbc00f553674f8d77b6bf4f6b6c6153e543c181d149ad4d8c7d74fd
+Version/csd_and_symmetry_fir=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|54b8e4ada1e7660169a3cac09bc1d443ea57399ff3211923f563ce4732f51d9940014559b5caedf8d47dbd0ba46683fc
+Version/csd_sym_pipeline_fir=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|664167122cee5f1207cf61364387b9dde33ba52cec2c08e8792f9f0c060f99a4c1e964759174cfabcc617cc237caae68
+Version/naive_fir=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|9e15ea555cb421ca08d28e265004509e5fe0f6cc11f37d48b53e35433dff82a01cdffd02df08d213cfd2772edb0af804
+Version/symmetric_fir=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|6cad337a39803708ef65600d813e9c7c2f5e4c0bebbc00f553674f8d77b6bf4f1f8d4efecd8827e52cb0f4835fb29cd4
 
 [fir_testbench]
-A/tb_implementation=21|../src/fir_implementaciones_tb.vhd|10|1*232170
-BinI32/tb_implementation=3*69830
-I=0*29465
-I/tb_implementation=0*87608
-M=11|0|ve4|1605646231944|../src/fir_implementaciones_tb.vhd|0*29125*0x2eb9db034f0fec8e8dee7e63d2b96260ce22de48|0*29364*0x23b75c12e3e89f2ef000564498faa8c2
-M/tb_implementation=21|0|ve4|1605661822828|../src/fir_implementaciones_tb.vhd|0*86476*0x78b49a79f9f0d7791e515c3fda19098177b49a0f|0*87486*0x20116f55b147878295aeff36dce7fc50
+A/tb_implementation=21|../src/fir_implementaciones_tb.vhd|10|1*256593
+BinI32/tb_implementation=3*77461
+I=0*92718
+I/tb_implementation=0*101621
+M=11|0|ve4|1606435565464|../src/fir_implementaciones_tb.vhd|0*29125*0x2eb9db034f0fec8e8dee7e63d2b96260ce22de48|0*29364*0x23b75c12e3e89f2ef000564498faa8c2
+M/tb_implementation=21|0|ve4|1606435627539|../src/fir_implementaciones_tb.vhd|0*100790*0xed333e2875a3e8907941cc6729899e3f7650e163|0*101499*0x20116f55b147878295aeff36dce7fc50
 R=../src/fir_implementaciones_tb.vhd|33
-Version=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|ff34ecf94ec5c336bb158199dc2426bded722672348d84ace439104dbb81040e66c27f34cd87ed91a87cb9818830889a
-Version/tb_implementation=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|822b1541d7c9fc6922f70cd9b4699d43436913d5f5adc011708dccd2894c790f456a95df1e23631fd47b7d53c171ab77
+Version=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|ff34ecf94ec5c336bb158199dc2426bded722672348d84ace439104dbb81040e424f01efe64fb0b7241f86996e6d5aa2
+Version/tb_implementation=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|822b1541d7c9fc6922f70cd9b4699d43436913d5f5adc011708dccd2894c790f5d0b7f86ff6acc37f1cf59fc9da94a31
 
 [impulse_entity]
-A/impulse_implementation=21|../src/impulse.vhd|15|1*233808
+A/impulse_implementation=21|../src/impulse.vhd|15|1*258233
 A/sample_implementation=+21|../src/impulse.vhd|15|1*137006
-BinI32/impulse_implementation=3*70056
+BinI32/impulse_implementation=3*77687
 I=0*84436
-I/impulse_implementation=0*87973
+I/impulse_implementation=0*102750
 M=11|0|ve4|1605661798985|../src/impulse.vhd|0*84096*0x57b18d1d07d423545ee0f53c196816bd0f527c5d|0*84350*0x23b75c12e3e89f2ef000564498faa8c2
-M/impulse_implementation=21|0|ve4|1605661822839|../src/impulse.vhd|0*84681*0x263e270b65aee47510097291393d2981057c3aff|0*85066*0x20116f55b147878295aeff36dce7fc50
+M/impulse_implementation=21|0|ve4|1606435627553|../src/impulse.vhd|0*84681*0x263e270b65aee47510097291393d2981057c3aff|0*85066*0x20116f55b147878295aeff36dce7fc50
 M/sample_implementation=21|0|ve4|1605647287789|../src/impulse.vhd|0*57708*0x804219dc00faa25e667fdc8fe02c31f82132fbf2|0*58085*0x20116f55b147878295aeff36dce7fc50
 R=../src/impulse.vhd|10
 Version=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|a6f5954e6649be963e721d14ade786b13c23841df90b7fb2d139aa2d76c4b38cb3c90f46211087158b27e469176a2204
-Version/impulse_implementation=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|9f3804e94a1d0ad7bf10c87390a4380ad2a59892ded5dcc8040b3d4459b96f5569fe639dea1c9a54785775a94c6f0dfd
+Version/impulse_implementation=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|9f3804e94a1d0ad7bf10c87390a4380ad2a59892ded5dcc8040b3d4459b96f556ac09f65838bad82b842a8be1b1ce5e2
 Version/sample_implementation=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|049d0a2c1b51ca2cad22b1eb566cc02d5092a68a136c7e6193a4ce93a3cfc325fc8496fd5ea3166f062dfe9354b919e1
 
 [sample_testbench]
@@ -79,7 +90,8 @@ Version=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|c88fe7e2437cad95e
 Version/sample_implementation=11.1.262.7351 (Windows)|00000003789cd3f5370600015b00b0|049d0a2c1b51ca2cad22b1eb566cc02d5092a68a136c7e6193a4ce93a3cfc3255348c8df1833815c397c3015128cf0ee
 
 [~U]
-eight_bit_int=3|0*0|0*194
+eight_bit_int=3|0*101984|0*102178
+fir=11|0*90696|
 fir_entity=11|0*792|
 fir_testbench=11|0*28993|
 impulse_entity=11|0*83868|

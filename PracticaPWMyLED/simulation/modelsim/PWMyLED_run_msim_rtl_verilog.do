@@ -1,0 +1,20 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/dsp_fpga/PracticaPWMyLED {C:/dsp_fpga/PracticaPWMyLED/ramp.v}
+vlog -vlog01compat -work work +incdir+C:/dsp_fpga/PracticaPWMyLED {C:/dsp_fpga/PracticaPWMyLED/pwm_ip.v}
+vlog -vlog01compat -work work +incdir+C:/dsp_fpga/PracticaPWMyLED {C:/dsp_fpga/PracticaPWMyLED/upcounter20b.v}
+vlog -vlog01compat -work work +incdir+C:/dsp_fpga/PracticaPWMyLED/db {C:/dsp_fpga/PracticaPWMyLED/db/pwm_ip_altpll.v}
+
+vlog -vlog01compat -work work +incdir+C:/dsp_fpga/PracticaPWMyLED/simulation/modelsim {C:/dsp_fpga/PracticaPWMyLED/simulation/modelsim/posta.vwf.vt}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  posta_tb_2
+
+add wave *
+view structure
+view signals
+run -all

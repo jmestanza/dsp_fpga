@@ -9,11 +9,11 @@ end entity;
 
 architecture tb_implementation of fir_testbench is 
 -- declarations
-component fir_entity
+component fir
 	PORT (clk : IN STD_LOGIC;
 	x : IN BYTE;
 	y : OUT BYTE:= 0);
-end component fir_entity;
+end component fir;
 
 component impulse_entity
 	PORT (clk_impulse : IN STD_LOGIC;
@@ -34,9 +34,9 @@ begin
 	UUT0: entity work.impulse_entity(impulse_implementation) port map(clk_impulse=>clk,impulse_out=>impulse);
 	
 	-- decimos con que arquitectura a la entidad fir_entity
-	UUT1: entity work.fir_entity(naive_fir) port map(clk=>clk,x=>impulse,y=>result1);
-	UUT2: entity work.fir_entity(symmetric_fir) port map(clk=>clk,x=>impulse,y=>result2);
-	UUT3: entity work.fir_entity(csd_and_symmetry_fir) port map(clk=>clk,x=>impulse,y=>result3);
-	UUT4: entity work.fir_entity(csd_sym_pipeline_fir) port map(clk=>clk,x=>impulse,y=>result4);
+	--UUT1: entity work.fir_entity(naive_fir) port map(clk=>clk,x=>impulse,y=>result1);
+	UUT2: entity work.fir(symmetric_fir) port map(clk=>clk,x=>impulse,y=>result2);
+	--UUT3: entity work.fir_entity(csd_and_symmetry_fir) port map(clk=>clk,x=>impulse,y=>result3);
+	--UUT4: entity work.fir_entity(csd_sym_pipeline_fir) port map(clk=>clk,x=>impulse,y=>result4);
 		
 end architecture tb_implementation;
