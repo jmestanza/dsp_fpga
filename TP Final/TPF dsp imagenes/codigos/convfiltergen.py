@@ -1,20 +1,29 @@
-import numpy as np 
+"""
+Toma un Kernel y te lo pasa al codigo de verilog para implementarlo
+"""
 
-kernel = np.array([[-1,-1,-1],[-1,8,-1],[-1,-1,-1]])
+import sys
 
-names = [["upleft","up","upright"],["left","original","right"],["downleft","down","downright"]]
+import numpy as np
+
+# DEFINE KERNEL TO USE:
+kernel = np.array([
+    [-1, -1, -1],
+    [-1, 8, -1],
+    [-1, -1, -1]
+    ])
+
+names = [
+    ["upleft", "up", "upright"],
+    ["left", "original", "right"],
+    ["downleft", "down", "downright"]
+    ]
 
 for i in range(len(names)):
     for j in range(len(names[0])):
         print("\t"+"reg [12:0] "+names[i][j]+";")
 
-
 d = {}
-
-# for i in range(9):
-#     print("d[\"\"]= \""+str(12*(i+1)-1)+":"+str(12*i)+"\"")
-
-# estaba al revessss :ccc
 
 d["downright"]= "11:0"
 d["downleft"]= "23:12"
@@ -26,23 +35,28 @@ d["right"]= "83:72"
 d["left"]= "95:84"
 d["original"]= "107:96"
 
-
-
-
 for i in range(len(names)):
     for j in range(len(names[0])):
         print("\t"+names[i][j]+" <= color_data["+d[names[i][j]]+"];")
 
-
-
 #implement kernel
 kernel_str = ""
 
-for rgb_color, slice_ in [["red","11:8"],["green","7:4"],["blue","3:0"]]:
+# FILTER WILL BE STORED IN /FILTROS/FILT.TXT
+sys.stdout = open("../filtros/filt.txt", "w")
+
+for rgb_color, slice_ in [
+    ["red", "11:8"],
+    ["green", "7:4"],
+    ["blue", "3:0"]
+    ]:
+
     kernel_str = ""
     for i in range(len(kernel)):
         for j in range(len(kernel[0])):
             plus = "" if (i == len(kernel) -1 and j == len(kernel[0])-1) else "+" 
-            kernel_str += "("+str(kernel[i][j])+ "*(" + names[i][j]+"["+slice_+"] << 4)"+ ")" + plus  
+            kernel_str += "(" + str(kernel[i][j])+ "*(" + names[i][j] + "[" + slice_ + "] << 4)" + ")" + plus  
 
-    print("\t"+rgb_color+" <=",kernel_str,";")
+    print("\t" + rgb_color + " <=", kernel_str, ";")
+
+sys.stdout.close()

@@ -1,4 +1,4 @@
-module flor128x128_rom
+module _rom
 	(
 		input wire clk,
 		input wire [6:0] row,

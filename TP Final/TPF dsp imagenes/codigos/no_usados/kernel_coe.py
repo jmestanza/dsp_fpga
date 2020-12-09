@@ -3,6 +3,8 @@
 Created on Tue Nov 13 23:36:04 2018
 
 @author: Gowtham
+
+POR AHORA NO SE USA
 """
 
 import cv2

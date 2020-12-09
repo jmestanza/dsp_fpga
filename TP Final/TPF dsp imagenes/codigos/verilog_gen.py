@@ -1,13 +1,18 @@
 # converts image to Verilog HDL that infers a ROM using Xilinx Block RAM
 # note: 12-bit color map word is r3, r2, r1, r0, g3, g2, g1, g0, b3, b2, b1, b0
 
-import matplotlib.pyplot as plt
+"""
+Toma un bitmap
+Genera el .v con lo que se va a guardar en rom
+"""
+import re
+import math
 
+import cv2
+import matplotlib.pyplot as plt
 import numpy as np
 from scipy import misc
 
-import math
-import cv2
 
 # returns string of 12-bit color at row x, column y of image
 def get_color_bits(im, y, x):
@@ -20,7 +25,7 @@ def get_color_bits(im, y, x):
     bx = b[0:4]
 
     # return concatination of RGB bits
-    return str(rx+gx+bx)
+    return str(rx + gx + bx)
 
 # write to file Verilog HDL
 # takes name of file, image array,
@@ -33,14 +38,13 @@ def rom_12_bit(name, im, mask=False, rem_x=-1, rem_y=-1):
     rem_y = 1
     if rem_x == -1 or rem_y == -1:
         a = 108*"0"# "000000000000"
-        
+
     # else set mask compare byte
     else:
         a = get_color_bits(im, rem_x, rem_y)
 
-    print(a)
     # make output filename from input
-    file_name = name.split('.')[0] + "_108_bit_rom.v"
+    file_name = "../verilog/" + re.search('[ \w-]+\.', name).group(0).split('.')[0] + "_108_bit_rom.v"
 
     # open file
     f = open(file_name, 'w')
@@ -70,7 +74,6 @@ def rom_12_bit(name, im, mask=False, rem_x=-1, rem_y=-1):
             # write : color_data = 
             case = format(y, 'b').zfill(row_width) + format(x, 'b').zfill(col_width)
             f.write("\t\t" + str(row_width + col_width) + "'b" + case + ": color_data = " + str(108) + "'b")
-            # f.write("\t\t" + str(row_width + col_width) + "'b" + case + ": color_data = " + str(12) + "'b")
 
             #original
             f.write(get_color_bits(im, y, x))
@@ -93,26 +96,13 @@ def rom_12_bit(name, im, mask=False, rem_x=-1, rem_y=-1):
 
             f.write(";\n")
 
-            # if mask is set to false, just write color data
-            # if(mask == False):
-            #     f.write(get_color_bits(im, y, x))
-            #     f.write(";\n")
-
-            # elif(get_color_bits(im, y, x) != a):
-            #     # write color bits to file
-            #     f.write(get_color_bits(im, y, x))
-            #     f.write(";\n")
-                
-            # else:
-            #     f.write("000000000000;\n")
-                
         f.write("\n")
-        
+
     # write end of module
     f.write("\t\tdefault: color_data = "+str(108)+"'b"+108*"0"+";\n\tendcase\nendmodule")
 
     # close file
-    f.close()    
+    f.close()
 
 # driver function
 def generate(name, rem_x=-1, rem_y=-1):
@@ -138,15 +128,13 @@ def generate(name, rem_x=-1, rem_y=-1):
                         else:
                             cum_sum -= im_filtered[(i+dx)%m,(j+dy)%n,k]
                 if(cum_sum<0):
-                    im_kernelized[i,j,k] = 0              
+                    im_kernelized[i,j,k] = 0
                 elif(cum_sum>255):
                     im_kernelized[i,j,k] = 255 & 0xF0
                 else:
                     im_kernelized[i,j,k] = cum_sum& 0xF0
 
-    im_kernelized = im_kernelized.astype(np.uint8)                          
-    #kernel = np.array([[-1,-1,-1],[-1,8,-1],[-1,-1,-1]])
-    #im = cv2.filter2D(im_filtered,-1,kernel)
+    im_kernelized = im_kernelized.astype(np.uint8)
 
     plt.imshow(im_kernelized)
     plt.show()
@@ -154,4 +142,4 @@ def generate(name, rem_x=-1, rem_y=-1):
     rom_12_bit(name, im)
 
 # generate rom from full bitmap image
-generate("flor128x128.bmp")
+generate("../bitmaps/flor128x128.bmp")

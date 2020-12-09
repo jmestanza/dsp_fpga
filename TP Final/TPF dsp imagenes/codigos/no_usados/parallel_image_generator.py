@@ -3,6 +3,8 @@
 Created on Fri Nov  9 11:14:26 2018
 
 @author: Gowtham
+
+POR AHORA NO SE USA
 """
 import numpy as np
 import cv2
