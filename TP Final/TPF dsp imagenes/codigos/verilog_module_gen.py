@@ -6,16 +6,12 @@ Toma un bitmap
 Genera el .v con lo que se va a guardar en rom
 """
 import re
-import math
 
-import cv2
-import matplotlib.pyplot as plt
-import numpy as np
-from scipy import misc
+import os
 
 def create_module(name, filter_file, input_size=107):
 
-    file_name = f"../verilog/{name}.v"
+    file_name = f"../verilog_effects/{name}.v"
 
     # open file
     f = open(file_name, 'w')
@@ -24,8 +20,7 @@ def create_module(name, filter_file, input_size=107):
     f.write("module " + name + "\n\t(\n\t\t")
     f.write("input clk,\n\t\tinput reset,\n\t\t")
     f.write("input [" + str(input_size) + ":0] color_data,\n\t\t")
-    f.write("output reg [11:0] filter_rgb_out,\n\t\t")
-    f.write("output reg [11:0] original_out\n\t);\n\n\t")
+    f.write("output reg [11:0] filter_rgb_out\n\t);\n\n\t")
 
     f.write("integer upleft;\n\t")
     f.write("integer up;\n\t")
@@ -57,8 +52,8 @@ def create_module(name, filter_file, input_size=107):
     f.write("right <= color_data[83:72];\n\t\t\t")
     f.write("downleft <= color_data[23:12];\n\t\t\t")
     f.write("down <= color_data[59:48];\n\t\t\t")
-    f.write("downright <= color_data[11:0];\n\t\t\t")
-    f.write("original_out <= color_data[11:0];\n\n")
+    f.write("downright <= color_data[11:0];\n\n")
+
 
     # FILTER
     filter_f = open(filter_file, "r")
@@ -85,5 +80,6 @@ def create_module(name, filter_file, input_size=107):
 
 # generate rom from full bitmap image
 # create_module("sobel_edge_detect_Y_filter_module", "../filtros/sobel_edge_detect_Y.txt")
-name = "high_bust_A9" 
-create_module(name, "../filtros/"+name+".txt")
+
+for effect in os.listdir("../filtros"):
+    create_module(effect, "../filtros/" + effect)

@@ -1,0 +1,47 @@
+{
+    "sobel_x": {
+        "kernel": [
+            [-3, 0, 3],
+            [-10, 0, 10],
+            [-3, 0, 3]
+        ],
+        "shift": false,
+        "norm": 0
+    },
+    "sobel_y": {
+        "kernel": [
+            [-3, -10, -3],
+            [0, 0, 0],
+            [3, 10, 3]
+            ],
+        "shift": false,
+        "norm": 0
+    },
+    "promediador": {
+        "kernel": [
+            [1, 1, 1],
+            [1, 1, 1],
+            [1, 1, 1]
+            ],
+        "shift": true,
+        "norm": 9
+    },
+    "high_boost_9": {
+        "kernel": [
+            [-1, -1, -1],
+            [-1, 9, -1],
+            [-1, -1, -1]
+            ],
+        "shift": true,
+        "norm": 0
+    },
+    "edge_detector": {
+        "kernel": [
+            [-1, -1, -1],
+            [-1, 8, -1],
+            [-1, -1, -1]
+            ],
+        "shift": true,
+        "norm": 0
+    }
+}
