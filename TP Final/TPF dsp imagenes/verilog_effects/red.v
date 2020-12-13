@@ -1,4 +1,4 @@
-module sobel_x.txt
+module red
 	(
 		input clk,
 		input reset,
@@ -37,10 +37,9 @@ module sobel_x.txt
 			down <= color_data[59:48];
 			downright <= color_data[11:0];
 
-	red <= (-3*(upleft[11:8]))+(0*(up[11:8]))+(3*(upright[11:8]))+(-10*(left[11:8]))+(0*(original[11:8]))+(10*(right[11:8]))+(-3*(downleft[11:8]))+(0*(down[11:8]))+(3*(downright[11:8])) ;
-	green <= (-3*(upleft[7:4]))+(0*(up[7:4]))+(3*(upright[7:4]))+(-10*(left[7:4]))+(0*(original[7:4]))+(10*(right[7:4]))+(-3*(downleft[7:4]))+(0*(down[7:4]))+(3*(downright[7:4])) ;
-	blue <= (-3*(upleft[3:0]))+(0*(up[3:0]))+(3*(upright[3:0]))+(-10*(left[3:0]))+(0*(original[3:0]))+(10*(right[3:0]))+(-3*(downleft[3:0]))+(0*(down[3:0]))+(3*(downright[3:0])) ;
-
+			red <= 0;
+			green <= original[7:4] << 4;
+			blue <= original[3:0] << 4;
 
 			red_filtered <= red > 255 ? 255: (red > 0 ? red: 0);
 			green_filtered <= green > 255 ? 255: (green > 0 ? green: 0);

@@ -1,4 +1,4 @@
-module grayscale.txt
+module grayscale
 	(
 		input clk,
 		input reset,

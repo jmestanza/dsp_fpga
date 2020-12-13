@@ -82,4 +82,4 @@ def create_module(name, filter_file, input_size=107):
 # create_module("sobel_edge_detect_Y_filter_module", "../filtros/sobel_edge_detect_Y.txt")
 
 for effect in os.listdir("../filtros"):
-    create_module(effect, "../filtros/" + effect)
+    create_module(effect[:-4], "../filtros/" + effect)

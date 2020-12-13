@@ -1,4 +1,4 @@
-module edge_detector.txt
+module green
 	(
 		input clk,
 		input reset,
@@ -37,10 +37,9 @@ module edge_detector.txt
 			down <= color_data[59:48];
 			downright <= color_data[11:0];
 
-	red <= (-1*(upleft[11:8] << 4 ))+(-1*(up[11:8] << 4 ))+(-1*(upright[11:8] << 4 ))+(-1*(left[11:8] << 4 ))+(8*(original[11:8] << 4 ))+(-1*(right[11:8] << 4 ))+(-1*(downleft[11:8] << 4 ))+(-1*(down[11:8] << 4 ))+(-1*(downright[11:8] << 4 )) ;
-	green <= (-1*(upleft[7:4] << 4 ))+(-1*(up[7:4] << 4 ))+(-1*(upright[7:4] << 4 ))+(-1*(left[7:4] << 4 ))+(8*(original[7:4] << 4 ))+(-1*(right[7:4] << 4 ))+(-1*(downleft[7:4] << 4 ))+(-1*(down[7:4] << 4 ))+(-1*(downright[7:4] << 4 )) ;
-	blue <= (-1*(upleft[3:0] << 4 ))+(-1*(up[3:0] << 4 ))+(-1*(upright[3:0] << 4 ))+(-1*(left[3:0] << 4 ))+(8*(original[3:0] << 4 ))+(-1*(right[3:0] << 4 ))+(-1*(downleft[3:0] << 4 ))+(-1*(down[3:0] << 4 ))+(-1*(downright[3:0] << 4 )) ;
-
+			red <= original[11:8] << 4;
+			green <= 0;
+			blue <= original[3:0] << 4;
 
 			red_filtered <= red > 255 ? 255: (red > 0 ? red: 0);
 			green_filtered <= green > 255 ? 255: (green > 0 ? green: 0);
