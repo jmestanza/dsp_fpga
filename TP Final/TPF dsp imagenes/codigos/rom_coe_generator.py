@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy import misc
 
+import re
 import math
 import cv2
 
@@ -25,22 +26,8 @@ def get_color_bits(im, y, x):
 # write to file Verilog HDL
 # takes name of file, image array,
 # pixel coordinates of background color to mask as 0
-def rom_12_bit(name, im, mask=False, rem_x=-1, rem_y=-1):
-
-    # get colorbyte of background color
-    # if coordinates left at default, map all data without masking
-    rem_x = 1 
-    rem_y = 1
-    if rem_x == -1 or rem_y == -1:
-        a = 108*"0"# "000000000000"
-        
-    # else set mask compare byte
-    else:
-        a = get_color_bits(im, rem_x, rem_y)
-
-    print(a)
-    # make output filename from input
-    file_name = name.split('.')[0] + "_108_bit_rom.v"
+def rom_coefficients_gen(name, im, mask=False):
+    file_name = "../coe_images/" + re.search('[ \w-]+\.', name).group(0).split('.')[0] + ".coe"
 
     # open file
     f = open(file_name, 'w')
@@ -58,14 +45,10 @@ def rom_12_bit(name, im, mask=False, rem_x=-1, rem_y=-1):
     
 
     # loops through y rows and x columns
-    print("tengo "+str(y_max*x_max)+" filas")
+    print("tengo "+str(y_max*x_max)+" filas para la rom (Port Depth)")
+    print("Como guardo 9 imagenes, tengo 9xBitsRGBVGA = 108bits (Port Width)")
     for y in range(y_max):
         for x in range(x_max):
-            # write : color_data = 
-            # case = format(y, 'b').zfill(row_width) + format(x, 'b').zfill(col_width)
-            # f.write("\t\t" + str(row_width + col_width) + "'b" + case + ": color_data = " + str(108) + "'b")
-            # f.write("\t\t" + str(row_width + col_width) + "'b" + case + ": color_data = " + str(12) + "'b")
-
             #original
             f.write(get_color_bits(im, y, x))
             #left
@@ -88,32 +71,19 @@ def rom_12_bit(name, im, mask=False, rem_x=-1, rem_y=-1):
             if x == x_max - 1 and y == y_max - 1:
                 f.write(";")
             else:
-                f.write(",\n")
-
-            # if mask is set to false, just write color data
-            # if(mask == False):
-            #     f.write(get_color_bits(im, y, x))
-            #     f.write(";\n")
-
-            # elif(get_color_bits(im, y, x) != a):
-            #     # write color bits to file
-            #     f.write(get_color_bits(im, y, x))
-            #     f.write(";\n")
-                
-            # else:
-            #     f.write("000000000000;\n")
-                
+                f.write(",\n")    
         f.write("\n")
         
-    # write end of module
-    # f.write("\t\tdefault: color_data = "+str(108)+"'b"+108*"0"+";\n\tendcase\nendmodule")
-
     # close file
     f.close()    
 
 # driver function
-def generate(name, rem_x=-1, rem_y=-1):
+
+def generate(name):
     im = cv2.cvtColor(cv2.imread(name),cv2.COLOR_BGR2RGB)   #(name, mode = 'RGB')
+
+    kernel = np.array([[-1,-1,-1],[-1,8,-1],[-1,-1,-1]])
+
     plt.imshow(im)
     plt.show()
     m,n,z = im.shape
@@ -121,34 +91,25 @@ def generate(name, rem_x=-1, rem_y=-1):
     for i in range(m):
         for j in range(n):
             for k in range(z):
-               im_filtered[i,j,k] = im[i,j,k] & 0xF0 # solo dejo los 4 mas significativos 
+               im_filtered[i,j,k] = im[i,j,k] & 0xF0 # solo dejo los 4 mas significativos
 
     im_kernelized = np.zeros_like(im).astype(np.int32)
+        
     for i in range(m):
         for j in range(n):
             for k in range(z):
                 cum_sum = 0
                 for dx in [-1,0,1]:
                     for dy in [-1,0,1]:
-                        if dx == 0 and dy == 0:
-                            cum_sum += 8*im_filtered[(i+dx)%m,(j+dy)%n,k]
-                        else:
-                            cum_sum -= im_filtered[(i+dx)%m,(j+dy)%n,k]
-                if(cum_sum<0):
-                    im_kernelized[i,j,k] = 0              
-                elif(cum_sum>255):
-                    im_kernelized[i,j,k] = 255 & 0xF0
-                else:
-                    im_kernelized[i,j,k] = cum_sum& 0xF0
+                        cum_sum += kernel[1+dx][1+dy]*im_filtered[(i+dx)%m,(j+dy)%n,k]  # sumo 1 para que acceda bien
+                im_kernelized[i,j,k] = np.clip(cum_sum,0,255) & 0xF0
 
     im_kernelized = im_kernelized.astype(np.uint8)                          
-    #kernel = np.array([[-1,-1,-1],[-1,8,-1],[-1,-1,-1]])
-    #im = cv2.filter2D(im_filtered,-1,kernel)
 
     plt.imshow(im_kernelized)
     plt.show()
-    print("width: " + str(im.shape[1]) + ", height: " + str(im.shape[0]))
-    rom_12_bit(name, im)
+    
+    rom_coefficients_gen(name, im)
 
 # generate rom from full bitmap image
-generate("flor128x128.bmp")
+generate("../bitmaps/flor128x128.bmp")
