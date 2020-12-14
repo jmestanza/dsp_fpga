@@ -37,9 +37,9 @@ module grayscale
 			down <= color_data[59:48];
 			downright <= color_data[11:0];
 
-			red <= (original[11:8]) / 3;
-			green <= (original[7:4]) / 5;
-			blue <= (original[3:0]) / 9;
+			red <= ((original[11:8] << 4) / 3) + ((original[7:4] << 4) / 5) + ((original[3:0] << 4) / 9);
+			green <= ((original[11:8] << 4) / 3) + ((original[7:4] << 4) / 5) + ((original[3:0] << 4) / 9);
+			blue <= ((original[11:8] << 4) / 3) + ((original[7:4] << 4) / 5) + ((original[3:0] << 4) / 9);
 
 
 			red_filtered <= red > 255 ? 255: (red > 0 ? red: 0);
