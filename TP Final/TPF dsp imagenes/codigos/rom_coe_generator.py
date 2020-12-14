@@ -112,4 +112,4 @@ def generate(name):
     rom_coefficients_gen(name, im)
 
 # generate rom from full bitmap image
-generate("../bitmaps/flor128x128.bmp")
+generate("../bitmaps/flor256x256.bmp")

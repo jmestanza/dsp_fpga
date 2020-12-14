@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Wed Dec  9 14:56:03 2020
+-- Date        : Mon Dec 14 17:36:01 2020
 -- Host        : J running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_sim_netlist.vhdl
+--               C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_sim_netlist.vhdl
 -- Design      : blk_mem_gen_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15256,7 +15256,7 @@ entity blk_mem_gen_0_blk_mem_gen_v8_4_4 is
   attribute C_DEFAULT_DATA : string;
   attribute C_DEFAULT_DATA of blk_mem_gen_0_blk_mem_gen_v8_4_4 : entity is "0";
   attribute C_DISABLE_WARN_BHV_COLL : integer;
-  attribute C_DISABLE_WARN_BHV_COLL of blk_mem_gen_0_blk_mem_gen_v8_4_4 : entity is 0;
+  attribute C_DISABLE_WARN_BHV_COLL of blk_mem_gen_0_blk_mem_gen_v8_4_4 : entity is 1;
   attribute C_DISABLE_WARN_BHV_RANGE : integer;
   attribute C_DISABLE_WARN_BHV_RANGE of blk_mem_gen_0_blk_mem_gen_v8_4_4 : entity is 0;
   attribute C_ELABORATION_DIR : string;
@@ -15737,7 +15737,7 @@ architecture STRUCTURE of blk_mem_gen_0 is
   attribute C_DEFAULT_DATA : string;
   attribute C_DEFAULT_DATA of U0 : label is "0";
   attribute C_DISABLE_WARN_BHV_COLL : integer;
-  attribute C_DISABLE_WARN_BHV_COLL of U0 : label is 0;
+  attribute C_DISABLE_WARN_BHV_COLL of U0 : label is 1;
   attribute C_DISABLE_WARN_BHV_RANGE : integer;
   attribute C_DISABLE_WARN_BHV_RANGE of U0 : label is 0;
   attribute C_ELABORATION_DIR : string;

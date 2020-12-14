@@ -13,10 +13,11 @@ module vga_test
 	wire video_on;
 	
 	wire p_tick_aux;
-	wire [10:0] x_pos; // max value => 640 + borders + ret = 800 
-	wire [10:0] y_pos; // max value => 480 + borders + ret = 525 (o algo asi)
+	wire [9:0] x_pos; // max value => 640 + borders + ret = 800 
+	wire [9:0] y_pos; // max value => 480 + borders + ret = 525
 
 	wire [107:0] color_data;
+
 	wire [11:0] original1;
 	      
     wire [11:0] red_filter;
@@ -28,8 +29,7 @@ module vga_test
     wire [11:0] edge_filter;
     wire [11:0] high_bust;
     wire [11:0] prom;
-    
-    
+    wire [11:0] grayscale;
     
     
     reg enable = 1;     
@@ -43,27 +43,28 @@ blk_mem_gen_0 rom_unit (
     .addra({y_pos[6:0],x_pos[6:0]}),
     .douta(color_data)
   );
+        original original_unit(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(original1));
         
-        red_filter_module(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(red_filter),.original_out(original1));
+        red red_filter_unit(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(red_filter));
         
-        green_filter_module(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(green_filter),.original_out());
+        green green_filter_unit(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(green_filter));
         
-        blue_filter_module(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(blue_filter),.original_out());
+        blue blue_filter_unit(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(blue_filter));
         
-        sobel_edge_detect_X_filter_module sobel_x(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(sobel_x_filter),.original_out());       
+        sobel_x sobel_x_unit(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(sobel_x_filter));       
         
-        sobel_edge_detect_Y_filter_module sobel_y(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(sobel_y_filter),.original_out());       
+        sobel_y sobel_y_unit(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(sobel_y_filter));       
 
-        colorinv_filter_module color_inv(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(color_inv_filter),.original_out());
+        colorinv colorinv_unit(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(color_inv_filter));
                       
-        edge_detect_filter edge_detect(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(edge_filter),.original_out());       
+        edge_detector edge_detector_unit(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(edge_filter));       
                         
-        high_bust_A9(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(high_bust),.original_out(original6));
+        high_boost_9 high_boost_9_unit(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(high_bust));
         
-        promediador(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(prom),.original_out(original7));
+        promediador(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(prom));
         
+        grayscale grayscale_unit(.clk(clk),.reset(reset),.color_data(color_data),.filter_rgb_out(grayscale));
         
-               
         always@(sw,clk)begin
             case(sw)
                 14'b00000000000000: rgb_reg = original1;
@@ -76,6 +77,7 @@ blk_mem_gen_0 rom_unit (
                 14'b00000000000111: rgb_reg = edge_filter;
                 14'b00000000001000: rgb_reg = high_bust;
                 14'b00000000001001: rgb_reg = prom;
+                14'b00000000001010: rgb_reg = grayscale;                
            
                 default :  rgb_reg = original1;
             endcase

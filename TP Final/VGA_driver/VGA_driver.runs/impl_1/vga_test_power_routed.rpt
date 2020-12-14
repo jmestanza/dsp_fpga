@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Wed Dec  9 20:14:11 2020
+| Date             : Mon Dec 14 17:40:20 2020
 | Host             : J running 64-bit major release  (build 9200)
 | Command          : report_power -file vga_test_power_routed.rpt -pb vga_test_power_summary_routed.pb -rpx vga_test_power_routed.rpx
 | Design           : vga_test
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.195        |
+| Total On-Chip Power (W)  | 0.198        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.121        |
+| Dynamic (W)              | 0.123        |
 | Device Static (W)        | 0.074        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.0         |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.010 |        3 |       --- |             --- |
-| Slice Logic    |     0.025 |     6217 |       --- |             --- |
-|   LUT as Logic |     0.022 |     3381 |     20800 |           16.25 |
-|   CARRY4       |     0.003 |      921 |      8150 |           11.30 |
-|   Register     |    <0.001 |      712 |     41600 |            1.71 |
-|   Others       |     0.000 |      170 |       --- |             --- |
-| Signals        |     0.025 |     9288 |       --- |             --- |
+| Slice Logic    |     0.026 |     6444 |       --- |             --- |
+|   LUT as Logic |     0.023 |     3496 |     20800 |           16.81 |
+|   CARRY4       |     0.003 |      939 |      8150 |           11.52 |
+|   Register     |    <0.001 |      791 |     41600 |            1.90 |
+|   Others       |     0.000 |      174 |       --- |             --- |
+| Signals        |     0.026 |     9469 |       --- |             --- |
 | Block RAM      |     0.022 |       48 |        50 |           96.00 |
 | DSPs           |     0.039 |       90 |        90 |          100.00 |
 | I/O            |    <0.001 |       28 |       106 |           26.42 |
 | Static Power   |     0.074 |          |           |                 |
-| Total          |     0.195 |          |           |                 |
+| Total          |     0.198 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.130 |       0.119 |      0.011 |
+| Vccint    |       1.000 |     0.132 |       0.121 |      0.011 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -142,15 +142,15 @@ Table of Contents
 +------------------------+-----------+
 | Name                   | Power (W) |
 +------------------------+-----------+
-| vga_test               |     0.121 |
-|   edge_detect          |     0.037 |
-|   nolabel_line61       |     0.037 |
-|   nolabel_line63       |     0.005 |
+| vga_test               |     0.123 |
+|   edge_detector_unit   |     0.037 |
+|   high_boost_9_unit    |     0.037 |
+|   nolabel_line64       |     0.007 |
 |   rom_unit             |     0.023 |
 |     U0                 |     0.023 |
 |       inst_blk_mem_gen |     0.023 |
-|   sobel_x              |     0.009 |
-|   sobel_y              |     0.009 |
+|   sobel_x_unit         |     0.009 |
+|   sobel_y_unit         |     0.009 |
 +------------------------+-----------+
 
 

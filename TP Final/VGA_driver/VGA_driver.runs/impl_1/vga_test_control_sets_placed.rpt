@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Wed Dec  9 20:12:56 2020
+| Date         : Mon Dec 14 17:39:14 2020
 | Host         : J running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file vga_test_control_sets_placed.rpt
 | Design       : vga_test
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    23 |
-|    Minimum number of control sets                        |    23 |
+| Total control sets                                       |    30 |
+|    Minimum number of control sets                        |    30 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    88 |
+| Unused register locations in slices containing registers |   121 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,9 +39,9 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    23 |
+| Total control sets |    30 |
 | >= 0 to < 4        |     0 |
-| >= 4 to < 6        |    19 |
+| >= 4 to < 6        |    26 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     2 |
@@ -58,44 +58,51 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               4 |            3 |
-| No           | No                    | Yes                    |              88 |           53 |
+| No           | No                    | No                     |               4 |            4 |
+| No           | No                    | Yes                    |             116 |           60 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |             528 |          176 |
-| Yes          | No                    | Yes                    |              20 |            7 |
-| Yes          | Yes                   | No                     |              72 |           22 |
+| Yes          | No                    | No                     |             551 |          186 |
+| Yes          | No                    | Yes                    |              20 |            8 |
+| Yes          | Yes                   | No                     |             100 |           37 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+--------------------------------------+---------------------------------------------+------------------+----------------+
-|  Clock Signal  |             Enable Signal            |               Set/Reset Signal              | Slice Load Count | Bel Load Count |
-+----------------+--------------------------------------+---------------------------------------------+------------------+----------------+
-|  clk_IBUF_BUFG |                                      |                                             |                3 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | edge_detect/blue_filtered[7]_i_1__1_n_0     |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line61/blue_filtered[7]_i_1__2_n_0  |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | edge_detect/green_filtered[7]_i_1__1_n_0    |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | edge_detect/red_filtered[7]_i_1__1_n_0      |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line63/blue_filtered[7]_i_1__4_n_0  |                2 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line63/green_filtered[7]_i_1__4_n_0 |                2 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line63/red_filtered[7]_i_1__4_n_0   |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line61/red_filtered[7]_i_1__2_n_0   |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | nolabel_line61/green_filtered[7]_i_1__2_n_0 |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | color_inv/blue_filtered[7]_i_1__3_n_0       |                2 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | color_inv/green_filtered[7]_i_1__3_n_0      |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | color_inv/red_filtered[7]_i_1__3_n_0        |                2 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | sobel_x/blue_filtered[7]_i_1__0_n_0         |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | sobel_x/green_filtered[7]_i_1__0_n_0        |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | sobel_x/red_filtered[7]_i_1__0_n_0          |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | sobel_y/blue_filtered[7]_i_1_n_0            |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | sobel_y/green_filtered[7]_i_1_n_0           |                1 |              4 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   | sobel_y/red_filtered[7]_i_1_n_0             |                1 |              4 |
-|  clk_IBUF_BUFG | vga_sync_unit/v_count_reg0           | reset_IBUF                                  |                4 |             10 |
-|  clk_IBUF_BUFG | vga_sync_unit/h_count_reg[9]_i_1_n_0 | reset_IBUF                                  |                3 |             10 |
-|  clk_IBUF_BUFG |                                      | reset_IBUF                                  |               53 |             88 |
-|  clk_IBUF_BUFG | edge_detect/p_0_in                   |                                             |              176 |            528 |
-+----------------+--------------------------------------+---------------------------------------------+------------------+----------------+
++----------------+--------------------------------------+-------------------------------------------------+------------------+----------------+
+|  Clock Signal  |             Enable Signal            |                 Set/Reset Signal                | Slice Load Count | Bel Load Count |
++----------------+--------------------------------------+-------------------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG |                                      |                                                 |                4 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | edge_detector_unit/red_filtered[7]_i_1__0_n_0   |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | high_boost_9_unit/red_filtered[7]_i_1_n_0       |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | sobel_y_unit/green_filtered[7]_i_1__2_n_0       |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | high_boost_9_unit/green_filtered[7]_i_1_n_0     |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | edge_detector_unit/blue_filtered[7]_i_1__0_n_0  |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | high_boost_9_unit/blue_filtered[7]_i_1_n_0      |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | grayscale_unit/red_filtered[7]_i_1__7_n_0       |                3 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | green_filter_unit/red_filtered[7]_i_1__4_n_0    |                3 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | green_filter_unit/blue_filtered[7]_i_1__5_n_0   |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | blue_filter_unit/red_filtered[7]_i_1__5_n_0     |                3 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | blue_filter_unit/green_filtered[7]_i_1__5_n_0   |                2 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | colorinv_unit/red_filtered[7]_i_1__6_n_0        |                2 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | colorinv_unit/green_filtered[7]_i_1__6_n_0      |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | colorinv_unit/blue_filtered[7]_i_1__6_n_0       |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | edge_detector_unit/green_filtered[7]_i_1__0_n_0 |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | nolabel_line64/blue_filtered[7]_i_1__1_n_0      |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | nolabel_line64/green_filtered[7]_i_1__1_n_0     |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | nolabel_line64/red_filtered[7]_i_1__1_n_0       |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | red_filter_unit/green_filtered[7]_i_1__4_n_0    |                3 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | red_filter_unit/blue_filtered[7]_i_1__4_n_0     |                2 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | sobel_x_unit/blue_filtered[7]_i_1__3_n_0        |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | sobel_x_unit/green_filtered[7]_i_1__3_n_0       |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | sobel_x_unit/red_filtered[7]_i_1__3_n_0         |                1 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | sobel_y_unit/blue_filtered[7]_i_1__2_n_0        |                2 |              4 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              | sobel_y_unit/red_filtered[7]_i_1__2_n_0         |                1 |              4 |
+|  clk_IBUF_BUFG | vga_sync_unit/h_count_reg[9]_i_1_n_0 | reset_IBUF                                      |                4 |             10 |
+|  clk_IBUF_BUFG | vga_sync_unit/v_count_reg0           | reset_IBUF                                      |                4 |             10 |
+|  clk_IBUF_BUFG |                                      | reset_IBUF                                      |               60 |            116 |
+|  clk_IBUF_BUFG | edge_detector_unit/E[0]              |                                                 |              186 |            551 |
++----------------+--------------------------------------+-------------------------------------------------+------------------+----------------+
 
 

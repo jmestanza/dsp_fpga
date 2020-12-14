@@ -33,16 +33,19 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/vivado_projects/VGA_driver/VGA_driver.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 add_files C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/flor128_rom.coe
+add_files c:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/flor128x128_12bit.coe
 read_verilog -library xil_defaultlib {
-  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/blue_filter_module.v
-  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/colorinv_filter_module.v
-  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/edge_detect_filter.v
-  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/green_filter_module.v
-  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/high_bust_A9.v
-  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/promediador_filter_module.v
-  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/red_filter_module.v
-  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/sobel_edge_detect_X_filter_module.v
-  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/sobel_edge_detect_Y_filter_module.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/blue.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/colorinv.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/edge_detector.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/grayscale.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/green.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/high_boost_9.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/original.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/promediador.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/red.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/sobel_x.v
+  C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/sobel_y.v
   C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/vga_sync.v
   C:/vivado_projects/VGA_driver/VGA_driver.srcs/sources_1/new/vga_test.v
 }
